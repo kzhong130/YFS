@@ -1,0 +1,1295 @@
+acquire 1
+release 1
+acquire lock 1 has been used
+acquire 1
+release 1
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+acquire lock 3 has been used
+acquire 3
+release 3
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+acquire lock 3 has been used
+acquire 3
+release 3
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+acquire lock 3 has been used
+acquire 3
+release 3
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+acquire lock 3 has been used
+acquire 3
+release 3
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+acquire lock 3 has been used
+acquire 3
+release 3
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 4
+release 4
+acquire lock 4 has been used
+acquire 4
+release 4
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 5
+release 5
+acquire lock 5 has been used
+acquire 5
+release 5
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 6
+release 6
+acquire lock 6 has been used
+acquire 6
+release 6
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 7
+release 7
+acquire lock 7 has been used
+acquire 7
+release 7
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 8
+release 8
+acquire lock 8 has been used
+acquire 8
+release 8
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 9
+release 9
+acquire lock 9 has been used
+acquire 9
+release 9
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 10
+release 10
+acquire lock 10 has been used
+acquire 10
+release 10
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 11
+release 11
+acquire lock 11 has been used
+acquire 11
+release 11
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 12
+release 12
+acquire lock 12 has been used
+acquire 12
+release 12
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 13
+release 13
+acquire lock 13 has been used
+acquire 13
+release 13
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 14
+release 14
+acquire lock 14 has been used
+acquire 14
+release 14
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 15
+release 15
+acquire lock 15 has been used
+acquire 15
+release 15
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 16
+release 16
+acquire lock 16 has been used
+acquire 16
+release 16
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 17
+release 17
+acquire lock 17 has been used
+acquire 17
+release 17
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 18
+release 18
+acquire lock 18 has been used
+acquire 18
+release 18
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 19
+release 19
+acquire lock 19 has been used
+acquire 19
+release 19
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 20
+release 20
+acquire lock 20 has been used
+acquire 20
+release 20
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 21
+release 21
+acquire lock 21 has been used
+acquire 21
+release 21
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire 22
+release 22
+acquire lock 22 has been used
+acquire 22
+release 22
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 4 has been used
+acquire 4
+release 4
+acquire lock 4 has been used
+acquire 4
+release 4
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 5 has been used
+acquire 5
+release 5
+acquire lock 5 has been used
+acquire 5
+release 5
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 6 has been used
+acquire 6
+release 6
+acquire lock 6 has been used
+acquire 6
+release 6
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 7 has been used
+acquire 7
+release 7
+acquire lock 7 has been used
+acquire 7
+release 7
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 8 has been used
+acquire 8
+release 8
+acquire lock 8 has been used
+acquire 8
+release 8
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 9 has been used
+acquire 9
+release 9
+acquire lock 9 has been used
+acquire 9
+release 9
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 10 has been used
+acquire 10
+release 10
+acquire lock 10 has been used
+acquire 10
+release 10
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 11 has been used
+acquire 11
+release 11
+acquire lock 11 has been used
+acquire 11
+release 11
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 12 has been used
+acquire 12
+release 12
+acquire lock 12 has been used
+acquire 12
+release 12
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 13 has been used
+acquire 13
+release 13
+acquire lock 13 has been used
+acquire 13
+release 13
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 14 has been used
+acquire 14
+release 14
+acquire lock 14 has been used
+acquire 14
+release 14
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 15 has been used
+acquire 15
+release 15
+acquire lock 15 has been used
+acquire 15
+release 15
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 16 has been used
+acquire 16
+release 16
+acquire lock 16 has been used
+acquire 16
+release 16
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 17 has been used
+acquire 17
+release 17
+acquire lock 17 has been used
+acquire 17
+release 17
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 18 has been used
+acquire 18
+release 18
+acquire lock 18 has been used
+acquire 18
+release 18
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 19 has been used
+acquire 19
+release 19
+acquire lock 19 has been used
+acquire 19
+release 19
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 20 has been used
+acquire 20
+release 20
+acquire lock 20 has been used
+acquire 20
+release 20
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 21 has been used
+acquire 21
+release 21
+acquire lock 21 has been used
+acquire 21
+release 21
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 22 has been used
+acquire 22
+release 22
+acquire lock 22 has been used
+acquire 22
+release 22
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+acquire lock 3 has been used
+acquire 3
+release 3
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 4 has been used
+acquire 4
+release 4
+acquire lock 2 has been used
+acquire 2
+acquire lock 4 has been used
+acquire 4
+release 4
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 5 has been used
+acquire 5
+release 5
+acquire lock 2 has been used
+acquire 2
+acquire lock 5 has been used
+acquire 5
+release 5
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 6 has been used
+acquire 6
+release 6
+acquire lock 2 has been used
+acquire 2
+acquire lock 6 has been used
+acquire 6
+release 6
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 7 has been used
+acquire 7
+release 7
+acquire lock 2 has been used
+acquire 2
+acquire lock 7 has been used
+acquire 7
+release 7
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 8 has been used
+acquire 8
+release 8
+acquire lock 2 has been used
+acquire 2
+acquire lock 8 has been used
+acquire 8
+release 8
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 9 has been used
+acquire 9
+release 9
+acquire lock 2 has been used
+acquire 2
+acquire lock 9 has been used
+acquire 9
+release 9
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 10 has been used
+acquire 10
+release 10
+acquire lock 2 has been used
+acquire 2
+acquire lock 10 has been used
+acquire 10
+release 10
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 11 has been used
+acquire 11
+release 11
+acquire lock 2 has been used
+acquire 2
+acquire lock 11 has been used
+acquire 11
+release 11
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 12 has been used
+acquire 12
+release 12
+acquire lock 2 has been used
+acquire 2
+acquire lock 12 has been used
+acquire 12
+release 12
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+acquire lock 3 has been used
+acquire 3
+release 3
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 4 has been used
+acquire 4
+release 4
+acquire lock 4 has been used
+acquire 4
+release 4
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 5 has been used
+acquire 5
+release 5
+acquire lock 5 has been used
+acquire 5
+release 5
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 6 has been used
+acquire 6
+release 6
+acquire lock 6 has been used
+acquire 6
+release 6
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 7 has been used
+acquire 7
+release 7
+acquire lock 7 has been used
+acquire 7
+release 7
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 8 has been used
+acquire 8
+release 8
+acquire lock 8 has been used
+acquire 8
+release 8
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 9 has been used
+acquire 9
+release 9
+acquire lock 9 has been used
+acquire 9
+release 9
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 10 has been used
+acquire 10
+release 10
+acquire lock 10 has been used
+acquire 10
+release 10
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 11 has been used
+acquire 11
+release 11
+acquire lock 11 has been used
+acquire 11
+release 11
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 12 has been used
+acquire 12
+release 12
+acquire lock 12 has been used
+acquire 12
+release 12
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 13 has been used
+acquire 13
+release 13
+acquire lock 13 has been used
+acquire 13
+release 13
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 14 has been used
+acquire 14
+release 14
+acquire lock 14 has been used
+acquire 14
+release 14
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 15 has been used
+acquire 15
+release 15
+acquire lock 15 has been used
+acquire 15
+release 15
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 16 has been used
+acquire 16
+release 16
+acquire lock 16 has been used
+acquire 16
+release 16
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 17 has been used
+acquire 17
+release 17
+acquire lock 17 has been used
+acquire 17
+release 17
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 18 has been used
+acquire 18
+release 18
+acquire lock 18 has been used
+acquire 18
+release 18
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 19 has been used
+acquire 19
+release 19
+acquire lock 19 has been used
+acquire 19
+release 19
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 20 has been used
+acquire 20
+release 20
+acquire lock 20 has been used
+acquire 20
+release 20
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 21 has been used
+acquire 21
+release 21
+acquire lock 21 has been used
+acquire 21
+release 21
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 22 has been used
+acquire 22
+release 22
+acquire lock 22 has been used
+acquire 22
+release 22
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 4 has been used
+acquire 4
+release 4
+acquire lock 4 has been used
+acquire 4
+release 4
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 5 has been used
+acquire 5
+release 5
+acquire lock 5 has been used
+acquire 5
+release 5
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 6 has been used
+acquire 6
+release 6
+acquire lock 6 has been used
+acquire 6
+release 6
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 7 has been used
+acquire 7
+release 7
+acquire lock 7 has been used
+acquire 7
+release 7
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 8 has been used
+acquire 8
+release 8
+acquire lock 8 has been used
+acquire 8
+release 8
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 9 has been used
+acquire 9
+release 9
+acquire lock 9 has been used
+acquire 9
+release 9
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 10 has been used
+acquire 10
+release 10
+acquire lock 10 has been used
+acquire 10
+release 10
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 11 has been used
+acquire 11
+release 11
+acquire lock 11 has been used
+acquire 11
+release 11
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 12 has been used
+acquire 12
+release 12
+acquire lock 12 has been used
+acquire 12
+release 12
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 13 has been used
+acquire 13
+release 13
+acquire lock 13 has been used
+acquire 13
+release 13
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 14 has been used
+acquire 14
+release 14
+acquire lock 14 has been used
+acquire 14
+release 14
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 15 has been used
+acquire 15
+release 15
+acquire lock 15 has been used
+acquire 15
+release 15
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 16 has been used
+acquire 16
+release 16
+acquire lock 16 has been used
+acquire 16
+release 16
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 17 has been used
+acquire 17
+release 17
+acquire lock 17 has been used
+acquire 17
+release 17
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 18 has been used
+acquire 18
+release 18
+acquire lock 18 has been used
+acquire 18
+release 18
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 19 has been used
+acquire 19
+release 19
+acquire lock 19 has been used
+acquire 19
+release 19
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 20 has been used
+acquire 20
+release 20
+acquire lock 20 has been used
+acquire 20
+release 20
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 21 has been used
+acquire 21
+release 21
+acquire lock 21 has been used
+acquire 21
+release 21
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 22 has been used
+acquire 22
+release 22
+acquire lock 22 has been used
+acquire 22
+release 22
+acquire lock 2 has been used
+acquire 2
+release 2
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3
+acquire lock 3 has been used
+acquire 3
+release 3

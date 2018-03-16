@@ -1,0 +1,4721 @@
+FUSE library version: 2.9.4
+unique: 1, opcode: INIT (26), nodeid: 0, insize: 56, pid: 0
+INIT: 7.26
+flags=0x001ffffb
+max_readahead=0x00020000
+   INIT: 7.19
+   flags=0x00000000
+   max_readahead=0x00020000
+   max_write=0x00020000
+   max_background=0
+   congestion_threshold=0
+   unique: 1, success, outsize: 40
+unique: 2, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+   unique: 2, error: -2 (No such file or directory), outsize: 16
+unique: 3, opcode: MKDIR (9), nodeid: 1, insize: 53, pid: 247
+yfs:mkdir 1
+isdir: 1 is a dir
+yfs:lookup file name d247
+isdir: 1 is a dir
+ec create
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758305 1510758305 1510758305
+   unique: 3, success, outsize: 144
+unique: 4, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758305 1510758305 1510758305
+   unique: 4, success, outsize: 144
+unique: 5, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+   unique: 5, error: -2 (No such file or directory), outsize: 16
+unique: 6, opcode: CREATE (35), nodeid: 2, insize: 59, pid: 247
+create lookup
+yfs:lookup file name f1
+isdir: 2 is a dir
+ec create
+yfs:create file name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 0
+   unique: 6, success, outsize: 160
+OK: create returns.
+unique: 7, opcode: GETXATTR (22), nodeid: 3, insize: 68, pid: 247
+   unique: 7, error: -38 (Function not implemented), outsize: 16
+unique: 8, opcode: WRITE (16), nodeid: 3, insize: 83, pid: 247
+yfs:write inum 3
+   unique: 8, success, outsize: 24
+unique: 9, opcode: FLUSH (25), nodeid: 3, insize: 64, pid: 247
+   unique: 9, error: -38 (Function not implemented), outsize: 16
+unique: 10, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 10, success, outsize: 16
+commit a new version
+ec commit
+unique: 11, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758306 1510758306 1510758306
+   unique: 11, success, outsize: 144
+unique: 12, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 12, success, outsize: 144
+unique: 13, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 13, success, outsize: 32
+unique: 14, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 14, success, outsize: 120
+unique: 15, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 15, success, outsize: 19
+unique: 16, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 16, success, outsize: 16
+unique: 17, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758306 1510758306 1510758306
+   unique: 17, success, outsize: 144
+unique: 18, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 18, success, outsize: 144
+unique: 19, opcode: UNLINK (10), nodeid: 2, insize: 43, pid: 247
+yfs:unlink f1
+isdir: 2 is a dir
+isdir: 3 is not a dir
+unlink file f1
+originial buf
+ 18
+after buf
+ 0
+   unique: 19, success, outsize: 16
+unique: 20, opcode: FORGET (2), nodeid: 3, insize: 48, pid: 0
+unique: 21, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758307 1510758307 1510758307
+   unique: 21, success, outsize: 144
+unique: 22, opcode: LOOKUP (1), nodeid: 2, insize: 44, pid: 247
+yfs:lookup file name fx1
+isdir: 2 is a dir
+   unique: 22, error: -2 (No such file or directory), outsize: 16
+unique: 23, opcode: CREATE (35), nodeid: 2, insize: 60, pid: 247
+create lookup
+yfs:lookup file name fx1
+isdir: 2 is a dir
+ec create
+yfs:create file name fx1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 0
+   unique: 23, success, outsize: 160
+OK: create returns.
+unique: 24, opcode: WRITE (16), nodeid: 3, insize: 83, pid: 247
+yfs:write inum 3
+   unique: 24, success, outsize: 24
+unique: 25, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 25, success, outsize: 16
+unique: 26, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758308 1510758308 1510758308
+   unique: 26, success, outsize: 144
+unique: 27, opcode: LOOKUP (1), nodeid: 2, insize: 44, pid: 247
+yfs:lookup file name fx1
+isdir: 2 is a dir
+Lookup: len is 3 name is fx1, passed name is fx1
+Lookup success: name fx1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 27, success, outsize: 144
+unique: 28, opcode: UNLINK (10), nodeid: 2, insize: 44, pid: 247
+yfs:unlink fx1
+isdir: 2 is a dir
+isdir: 3 is not a dir
+unlink file fx1
+originial buf
+ 19
+after buf
+ 0
+   unique: 28, success, outsize: 16
+unique: 29, opcode: FORGET (2), nodeid: 3, insize: 48, pid: 0
+unique: 30, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758309 1510758309 1510758309
+   unique: 30, success, outsize: 144
+unique: 31, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f2
+isdir: 2 is a dir
+   unique: 31, error: -2 (No such file or directory), outsize: 16
+unique: 32, opcode: CREATE (35), nodeid: 2, insize: 59, pid: 247
+create lookup
+yfs:lookup file name f2
+isdir: 2 is a dir
+ec create
+yfs:create file name f2 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 0
+   unique: 32, success, outsize: 160
+OK: create returns.
+unique: 33, opcode: WRITE (16), nodeid: 3, insize: 83, pid: 247
+yfs:write inum 3
+   unique: 33, success, outsize: 24
+unique: 34, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 34, success, outsize: 16
+unique: 35, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758310 1510758310 1510758310
+   unique: 35, success, outsize: 144
+unique: 36, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f2
+isdir: 2 is a dir
+Lookup: len is 2 name is f2, passed name is f2
+Lookup success: name f2 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 36, success, outsize: 144
+unique: 37, opcode: UNLINK (10), nodeid: 2, insize: 43, pid: 247
+yfs:unlink f2
+isdir: 2 is a dir
+isdir: 3 is not a dir
+unlink file f2
+originial buf
+ 18
+after buf
+ 0
+   unique: 37, success, outsize: 16
+unique: 38, opcode: FORGET (2), nodeid: 3, insize: 48, pid: 0
+unique: 39, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758311 1510758311 1510758311
+   unique: 39, success, outsize: 144
+unique: 40, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f3
+isdir: 2 is a dir
+   unique: 40, error: -2 (No such file or directory), outsize: 16
+unique: 41, opcode: CREATE (35), nodeid: 2, insize: 59, pid: 247
+create lookup
+yfs:lookup file name f3
+isdir: 2 is a dir
+ec create
+yfs:create file name f3 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 0
+   unique: 41, success, outsize: 160
+OK: create returns.
+unique: 42, opcode: WRITE (16), nodeid: 3, insize: 83, pid: 247
+yfs:write inum 3
+   unique: 42, success, outsize: 24
+unique: 43, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 43, success, outsize: 16
+unique: 44, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758312 1510758312 1510758312
+   unique: 44, success, outsize: 144
+unique: 45, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f3
+isdir: 2 is a dir
+Lookup: len is 2 name is f3, passed name is f3
+Lookup success: name f3 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 45, success, outsize: 144
+unique: 46, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 46, success, outsize: 32
+unique: 47, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 47, success, outsize: 120
+unique: 48, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 48, success, outsize: 19
+unique: 49, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 49, success, outsize: 16
+unique: 50, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758312 1510758312 1510758312
+   unique: 50, success, outsize: 144
+unique: 51, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f3
+isdir: 2 is a dir
+Lookup: len is 2 name is f3, passed name is f3
+Lookup success: name f3 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 51, success, outsize: 144
+unique: 52, opcode: UNLINK (10), nodeid: 2, insize: 43, pid: 247
+yfs:unlink f3
+isdir: 2 is a dir
+isdir: 3 is not a dir
+unlink file f3
+originial buf
+ 18
+after buf
+ 0
+   unique: 52, success, outsize: 16
+unique: 53, opcode: FORGET (2), nodeid: 3, insize: 48, pid: 0
+commit a new version
+ec commit
+unique: 54, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758313 1510758313 1510758313
+   unique: 54, success, outsize: 144
+unique: 55, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+   unique: 55, error: -2 (No such file or directory), outsize: 16
+unique: 56, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758313 1510758313 1510758313
+   unique: 56, success, outsize: 144
+unique: 57, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f2
+isdir: 2 is a dir
+   unique: 57, error: -2 (No such file or directory), outsize: 16
+unique: 58, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758313 1510758313 1510758313
+   unique: 58, success, outsize: 144
+unique: 59, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f3
+isdir: 2 is a dir
+   unique: 59, error: -2 (No such file or directory), outsize: 16
+unique: 60, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758313 1510758313 1510758313
+   unique: 60, success, outsize: 144
+unique: 61, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+   unique: 61, error: -2 (No such file or directory), outsize: 16
+unique: 62, opcode: CREATE (35), nodeid: 2, insize: 59, pid: 247
+create lookup
+yfs:lookup file name f1
+isdir: 2 is a dir
+ec create
+yfs:create file name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 0
+   unique: 62, success, outsize: 160
+OK: create returns.
+unique: 63, opcode: WRITE (16), nodeid: 3, insize: 83, pid: 247
+yfs:write inum 3
+   unique: 63, success, outsize: 24
+unique: 64, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 64, success, outsize: 16
+unique: 65, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758314 1510758314 1510758314
+   unique: 65, success, outsize: 144
+unique: 66, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 66, success, outsize: 144
+unique: 67, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 67, success, outsize: 32
+unique: 68, opcode: WRITE (16), nodeid: 3, insize: 83, pid: 247
+yfs:write inum 3
+   unique: 68, success, outsize: 24
+unique: 69, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 69, success, outsize: 16
+unique: 70, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758315 1510758314 1510758314
+   unique: 70, success, outsize: 144
+unique: 71, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 6
+   unique: 71, success, outsize: 144
+unique: 72, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 72, success, outsize: 32
+unique: 73, opcode: WRITE (16), nodeid: 3, insize: 83, pid: 247
+yfs:write inum 3
+   unique: 73, success, outsize: 24
+unique: 74, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 74, success, outsize: 16
+commit a new version
+ec commit
+unique: 75, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758316 1510758314 1510758314
+   unique: 75, success, outsize: 144
+unique: 76, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 9
+   unique: 76, success, outsize: 144
+unique: 77, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 77, success, outsize: 32
+unique: 78, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 9
+   unique: 78, success, outsize: 120
+unique: 79, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 79, success, outsize: 25
+unique: 80, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 80, success, outsize: 16
+unique: 81, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758316 1510758314 1510758314
+   unique: 81, success, outsize: 144
+unique: 82, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 82, success, outsize: 32
+unique: 83, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758316 1510758314 1510758314
+   unique: 83, success, outsize: 120
+unique: 84, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name f1, file inum 3
+   unique: 84, success, outsize: 48
+unique: 85, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name f1, file inum 3
+   unique: 85, success, outsize: 16
+unique: 86, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 86, success, outsize: 16
+unique: 87, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758316 1510758314 1510758314
+   unique: 87, success, outsize: 144
+unique: 88, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 9
+   unique: 88, success, outsize: 144
+unique: 89, opcode: UNLINK (10), nodeid: 2, insize: 43, pid: 247
+yfs:unlink f1
+isdir: 2 is a dir
+isdir: 3 is not a dir
+unlink file f1
+originial buf
+ 18
+after buf
+ 0
+   unique: 89, success, outsize: 16
+unique: 90, opcode: FORGET (2), nodeid: 3, insize: 48, pid: 0
+commit a new version
+ec commit
+unique: 91, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758317 1510758317 1510758317
+   unique: 91, success, outsize: 144
+unique: 92, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 92, success, outsize: 32
+unique: 93, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758317 1510758317 1510758317
+   unique: 93, success, outsize: 120
+unique: 94, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+   unique: 94, success, outsize: 16
+unique: 95, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 95, success, outsize: 16
+unique: 96, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758317 1510758317 1510758317
+   unique: 96, success, outsize: 144
+unique: 97, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-0
+isdir: 2 is a dir
+   unique: 97, error: -2 (No such file or directory), outsize: 16
+unique: 98, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-0
+isdir: 2 is a dir
+ec create
+yfs:create file name aa-0 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 0
+   unique: 98, success, outsize: 160
+OK: create returns.
+unique: 99, opcode: WRITE (16), nodeid: 3, insize: 84, pid: 247
+yfs:write inum 3
+   unique: 99, success, outsize: 24
+unique: 100, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 100, success, outsize: 16
+unique: 101, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 101, success, outsize: 144
+unique: 102, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-1
+   unique: 102, error: -2 (No such file or directory), outsize: 16
+unique: 103, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-1
+ec create
+yfs:create file name aa-1 inum 4
+isfile: 4 is a file
+getfile 0000000000000004
+getfile 0000000000000004 -> sz 0
+   unique: 103, success, outsize: 160
+OK: create returns.
+unique: 104, opcode: WRITE (16), nodeid: 4, insize: 84, pid: 247
+yfs:write inum 4
+   unique: 104, success, outsize: 24
+unique: 105, opcode: RELEASE (18), nodeid: 4, insize: 64, pid: 0
+   unique: 105, success, outsize: 16
+unique: 106, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 106, success, outsize: 144
+unique: 107, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-2
+Lookup: len is 4 name is aa-1, passed name is aa-2
+   unique: 107, error: -2 (No such file or directory), outsize: 16
+unique: 108, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-2
+Lookup: len is 4 name is aa-1, passed name is aa-2
+ec create
+yfs:create file name aa-2 inum 5
+isfile: 5 is a file
+getfile 0000000000000005
+getfile 0000000000000005 -> sz 0
+   unique: 108, success, outsize: 160
+OK: create returns.
+unique: 109, opcode: WRITE (16), nodeid: 5, insize: 84, pid: 247
+yfs:write inum 5
+   unique: 109, success, outsize: 24
+unique: 110, opcode: RELEASE (18), nodeid: 5, insize: 64, pid: 0
+   unique: 110, success, outsize: 16
+unique: 111, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 111, success, outsize: 144
+unique: 112, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-3
+Lookup: len is 4 name is aa-1, passed name is aa-3
+Lookup: len is 4 name is aa-2, passed name is aa-3
+   unique: 112, error: -2 (No such file or directory), outsize: 16
+unique: 113, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-3
+Lookup: len is 4 name is aa-1, passed name is aa-3
+Lookup: len is 4 name is aa-2, passed name is aa-3
+ec create
+yfs:create file name aa-3 inum 6
+isfile: 6 is a file
+getfile 0000000000000006
+getfile 0000000000000006 -> sz 0
+   unique: 113, success, outsize: 160
+OK: create returns.
+unique: 114, opcode: WRITE (16), nodeid: 6, insize: 84, pid: 247
+yfs:write inum 6
+   unique: 114, success, outsize: 24
+unique: 115, opcode: RELEASE (18), nodeid: 6, insize: 64, pid: 0
+   unique: 115, success, outsize: 16
+unique: 116, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 116, success, outsize: 144
+unique: 117, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-4
+Lookup: len is 4 name is aa-1, passed name is aa-4
+Lookup: len is 4 name is aa-2, passed name is aa-4
+Lookup: len is 4 name is aa-3, passed name is aa-4
+   unique: 117, error: -2 (No such file or directory), outsize: 16
+unique: 118, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-4
+Lookup: len is 4 name is aa-1, passed name is aa-4
+Lookup: len is 4 name is aa-2, passed name is aa-4
+Lookup: len is 4 name is aa-3, passed name is aa-4
+ec create
+yfs:create file name aa-4 inum 7
+isfile: 7 is a file
+getfile 0000000000000007
+getfile 0000000000000007 -> sz 0
+   unique: 118, success, outsize: 160
+OK: create returns.
+unique: 119, opcode: WRITE (16), nodeid: 7, insize: 84, pid: 247
+yfs:write inum 7
+   unique: 119, success, outsize: 24
+unique: 120, opcode: RELEASE (18), nodeid: 7, insize: 64, pid: 0
+   unique: 120, success, outsize: 16
+unique: 121, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 121, success, outsize: 144
+unique: 122, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-5
+Lookup: len is 4 name is aa-1, passed name is aa-5
+Lookup: len is 4 name is aa-2, passed name is aa-5
+Lookup: len is 4 name is aa-3, passed name is aa-5
+Lookup: len is 4 name is aa-4, passed name is aa-5
+   unique: 122, error: -2 (No such file or directory), outsize: 16
+unique: 123, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-5
+Lookup: len is 4 name is aa-1, passed name is aa-5
+Lookup: len is 4 name is aa-2, passed name is aa-5
+Lookup: len is 4 name is aa-3, passed name is aa-5
+Lookup: len is 4 name is aa-4, passed name is aa-5
+ec create
+yfs:create file name aa-5 inum 8
+isfile: 8 is a file
+getfile 0000000000000008
+getfile 0000000000000008 -> sz 0
+   unique: 123, success, outsize: 160
+OK: create returns.
+unique: 124, opcode: WRITE (16), nodeid: 8, insize: 84, pid: 247
+yfs:write inum 8
+   unique: 124, success, outsize: 24
+unique: 125, opcode: RELEASE (18), nodeid: 8, insize: 64, pid: 0
+   unique: 125, success, outsize: 16
+unique: 126, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 126, success, outsize: 144
+unique: 127, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-6
+Lookup: len is 4 name is aa-1, passed name is aa-6
+Lookup: len is 4 name is aa-2, passed name is aa-6
+Lookup: len is 4 name is aa-3, passed name is aa-6
+Lookup: len is 4 name is aa-4, passed name is aa-6
+Lookup: len is 4 name is aa-5, passed name is aa-6
+   unique: 127, error: -2 (No such file or directory), outsize: 16
+unique: 128, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-6
+Lookup: len is 4 name is aa-1, passed name is aa-6
+Lookup: len is 4 name is aa-2, passed name is aa-6
+Lookup: len is 4 name is aa-3, passed name is aa-6
+Lookup: len is 4 name is aa-4, passed name is aa-6
+Lookup: len is 4 name is aa-5, passed name is aa-6
+ec create
+yfs:create file name aa-6 inum 9
+isfile: 9 is a file
+getfile 0000000000000009
+getfile 0000000000000009 -> sz 0
+   unique: 128, success, outsize: 160
+OK: create returns.
+unique: 129, opcode: WRITE (16), nodeid: 9, insize: 84, pid: 247
+yfs:write inum 9
+   unique: 129, success, outsize: 24
+unique: 130, opcode: RELEASE (18), nodeid: 9, insize: 64, pid: 0
+   unique: 130, success, outsize: 16
+unique: 131, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 131, success, outsize: 144
+unique: 132, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-7
+Lookup: len is 4 name is aa-1, passed name is aa-7
+Lookup: len is 4 name is aa-2, passed name is aa-7
+Lookup: len is 4 name is aa-3, passed name is aa-7
+Lookup: len is 4 name is aa-4, passed name is aa-7
+Lookup: len is 4 name is aa-5, passed name is aa-7
+Lookup: len is 4 name is aa-6, passed name is aa-7
+   unique: 132, error: -2 (No such file or directory), outsize: 16
+unique: 133, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-7
+Lookup: len is 4 name is aa-1, passed name is aa-7
+Lookup: len is 4 name is aa-2, passed name is aa-7
+Lookup: len is 4 name is aa-3, passed name is aa-7
+Lookup: len is 4 name is aa-4, passed name is aa-7
+Lookup: len is 4 name is aa-5, passed name is aa-7
+Lookup: len is 4 name is aa-6, passed name is aa-7
+ec create
+yfs:create file name aa-7 inum 10
+isfile: 10 is a file
+getfile 000000000000000a
+getfile 000000000000000a -> sz 0
+   unique: 133, success, outsize: 160
+OK: create returns.
+unique: 134, opcode: WRITE (16), nodeid: 10, insize: 84, pid: 247
+yfs:write inum 10
+   unique: 134, success, outsize: 24
+unique: 135, opcode: RELEASE (18), nodeid: 10, insize: 64, pid: 0
+   unique: 135, success, outsize: 16
+unique: 136, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 136, success, outsize: 144
+unique: 137, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-8
+Lookup: len is 4 name is aa-1, passed name is aa-8
+Lookup: len is 4 name is aa-2, passed name is aa-8
+Lookup: len is 4 name is aa-3, passed name is aa-8
+Lookup: len is 4 name is aa-4, passed name is aa-8
+Lookup: len is 4 name is aa-5, passed name is aa-8
+Lookup: len is 4 name is aa-6, passed name is aa-8
+Lookup: len is 4 name is aa-7, passed name is aa-8
+   unique: 137, error: -2 (No such file or directory), outsize: 16
+unique: 138, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-8
+Lookup: len is 4 name is aa-1, passed name is aa-8
+Lookup: len is 4 name is aa-2, passed name is aa-8
+Lookup: len is 4 name is aa-3, passed name is aa-8
+Lookup: len is 4 name is aa-4, passed name is aa-8
+Lookup: len is 4 name is aa-5, passed name is aa-8
+Lookup: len is 4 name is aa-6, passed name is aa-8
+Lookup: len is 4 name is aa-7, passed name is aa-8
+ec create
+yfs:create file name aa-8 inum 11
+isfile: 11 is a file
+getfile 000000000000000b
+getfile 000000000000000b -> sz 0
+   unique: 138, success, outsize: 160
+OK: create returns.
+unique: 139, opcode: WRITE (16), nodeid: 11, insize: 84, pid: 247
+yfs:write inum 11
+   unique: 139, success, outsize: 24
+unique: 140, opcode: RELEASE (18), nodeid: 11, insize: 64, pid: 0
+   unique: 140, success, outsize: 16
+unique: 141, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 141, success, outsize: 144
+unique: 142, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-9
+Lookup: len is 4 name is aa-1, passed name is aa-9
+Lookup: len is 4 name is aa-2, passed name is aa-9
+Lookup: len is 4 name is aa-3, passed name is aa-9
+Lookup: len is 4 name is aa-4, passed name is aa-9
+Lookup: len is 4 name is aa-5, passed name is aa-9
+Lookup: len is 4 name is aa-6, passed name is aa-9
+Lookup: len is 4 name is aa-7, passed name is aa-9
+Lookup: len is 4 name is aa-8, passed name is aa-9
+   unique: 142, error: -2 (No such file or directory), outsize: 16
+unique: 143, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name aa-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-9
+Lookup: len is 4 name is aa-1, passed name is aa-9
+Lookup: len is 4 name is aa-2, passed name is aa-9
+Lookup: len is 4 name is aa-3, passed name is aa-9
+Lookup: len is 4 name is aa-4, passed name is aa-9
+Lookup: len is 4 name is aa-5, passed name is aa-9
+Lookup: len is 4 name is aa-6, passed name is aa-9
+Lookup: len is 4 name is aa-7, passed name is aa-9
+Lookup: len is 4 name is aa-8, passed name is aa-9
+ec create
+yfs:create file name aa-9 inum 12
+isfile: 12 is a file
+getfile 000000000000000c
+getfile 000000000000000c -> sz 0
+   unique: 143, success, outsize: 160
+OK: create returns.
+unique: 144, opcode: WRITE (16), nodeid: 12, insize: 84, pid: 247
+yfs:write inum 12
+   unique: 144, success, outsize: 24
+unique: 145, opcode: RELEASE (18), nodeid: 12, insize: 64, pid: 0
+   unique: 145, success, outsize: 16
+unique: 146, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758318 1510758318 1510758318
+   unique: 146, success, outsize: 144
+unique: 147, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-0
+Lookup: len is 4 name is aa-1, passed name is bb-0
+Lookup: len is 4 name is aa-2, passed name is bb-0
+Lookup: len is 4 name is aa-3, passed name is bb-0
+Lookup: len is 4 name is aa-4, passed name is bb-0
+Lookup: len is 4 name is aa-5, passed name is bb-0
+Lookup: len is 4 name is aa-6, passed name is bb-0
+Lookup: len is 4 name is aa-7, passed name is bb-0
+Lookup: len is 4 name is aa-8, passed name is bb-0
+Lookup: len is 4 name is aa-9, passed name is bb-0
+   unique: 147, error: -2 (No such file or directory), outsize: 16
+unique: 148, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-0
+Lookup: len is 4 name is aa-1, passed name is bb-0
+Lookup: len is 4 name is aa-2, passed name is bb-0
+Lookup: len is 4 name is aa-3, passed name is bb-0
+Lookup: len is 4 name is aa-4, passed name is bb-0
+Lookup: len is 4 name is aa-5, passed name is bb-0
+Lookup: len is 4 name is aa-6, passed name is bb-0
+Lookup: len is 4 name is aa-7, passed name is bb-0
+Lookup: len is 4 name is aa-8, passed name is bb-0
+Lookup: len is 4 name is aa-9, passed name is bb-0
+ec create
+yfs:create file name bb-0 inum 13
+isfile: 13 is a file
+getfile 000000000000000d
+getfile 000000000000000d -> sz 0
+   unique: 148, success, outsize: 160
+OK: create returns.
+unique: 149, opcode: WRITE (16), nodeid: 13, insize: 84, pid: 247
+yfs:write inum 13
+   unique: 149, success, outsize: 24
+unique: 150, opcode: RELEASE (18), nodeid: 13, insize: 64, pid: 0
+   unique: 150, success, outsize: 16
+unique: 151, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 151, success, outsize: 144
+unique: 152, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-1
+Lookup: len is 4 name is aa-1, passed name is bb-1
+Lookup: len is 4 name is aa-2, passed name is bb-1
+Lookup: len is 4 name is aa-3, passed name is bb-1
+Lookup: len is 4 name is aa-4, passed name is bb-1
+Lookup: len is 4 name is aa-5, passed name is bb-1
+Lookup: len is 4 name is aa-6, passed name is bb-1
+Lookup: len is 4 name is aa-7, passed name is bb-1
+Lookup: len is 4 name is aa-8, passed name is bb-1
+Lookup: len is 4 name is aa-9, passed name is bb-1
+Lookup: len is 4 name is bb-0, passed name is bb-1
+   unique: 152, error: -2 (No such file or directory), outsize: 16
+unique: 153, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-1
+Lookup: len is 4 name is aa-1, passed name is bb-1
+Lookup: len is 4 name is aa-2, passed name is bb-1
+Lookup: len is 4 name is aa-3, passed name is bb-1
+Lookup: len is 4 name is aa-4, passed name is bb-1
+Lookup: len is 4 name is aa-5, passed name is bb-1
+Lookup: len is 4 name is aa-6, passed name is bb-1
+Lookup: len is 4 name is aa-7, passed name is bb-1
+Lookup: len is 4 name is aa-8, passed name is bb-1
+Lookup: len is 4 name is aa-9, passed name is bb-1
+Lookup: len is 4 name is bb-0, passed name is bb-1
+ec create
+yfs:create file name bb-1 inum 14
+isfile: 14 is a file
+getfile 000000000000000e
+getfile 000000000000000e -> sz 0
+   unique: 153, success, outsize: 160
+OK: create returns.
+unique: 154, opcode: WRITE (16), nodeid: 14, insize: 84, pid: 247
+yfs:write inum 14
+   unique: 154, success, outsize: 24
+unique: 155, opcode: RELEASE (18), nodeid: 14, insize: 64, pid: 0
+   unique: 155, success, outsize: 16
+unique: 156, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 156, success, outsize: 144
+unique: 157, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-2
+Lookup: len is 4 name is aa-1, passed name is bb-2
+Lookup: len is 4 name is aa-2, passed name is bb-2
+Lookup: len is 4 name is aa-3, passed name is bb-2
+Lookup: len is 4 name is aa-4, passed name is bb-2
+Lookup: len is 4 name is aa-5, passed name is bb-2
+Lookup: len is 4 name is aa-6, passed name is bb-2
+Lookup: len is 4 name is aa-7, passed name is bb-2
+Lookup: len is 4 name is aa-8, passed name is bb-2
+Lookup: len is 4 name is aa-9, passed name is bb-2
+Lookup: len is 4 name is bb-0, passed name is bb-2
+Lookup: len is 4 name is bb-1, passed name is bb-2
+   unique: 157, error: -2 (No such file or directory), outsize: 16
+unique: 158, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-2
+Lookup: len is 4 name is aa-1, passed name is bb-2
+Lookup: len is 4 name is aa-2, passed name is bb-2
+Lookup: len is 4 name is aa-3, passed name is bb-2
+Lookup: len is 4 name is aa-4, passed name is bb-2
+Lookup: len is 4 name is aa-5, passed name is bb-2
+Lookup: len is 4 name is aa-6, passed name is bb-2
+Lookup: len is 4 name is aa-7, passed name is bb-2
+Lookup: len is 4 name is aa-8, passed name is bb-2
+Lookup: len is 4 name is aa-9, passed name is bb-2
+Lookup: len is 4 name is bb-0, passed name is bb-2
+Lookup: len is 4 name is bb-1, passed name is bb-2
+ec create
+yfs:create file name bb-2 inum 15
+isfile: 15 is a file
+getfile 000000000000000f
+getfile 000000000000000f -> sz 0
+   unique: 158, success, outsize: 160
+OK: create returns.
+unique: 159, opcode: WRITE (16), nodeid: 15, insize: 84, pid: 247
+yfs:write inum 15
+   unique: 159, success, outsize: 24
+unique: 160, opcode: RELEASE (18), nodeid: 15, insize: 64, pid: 0
+   unique: 160, success, outsize: 16
+unique: 161, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 161, success, outsize: 144
+unique: 162, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-3
+Lookup: len is 4 name is aa-1, passed name is bb-3
+Lookup: len is 4 name is aa-2, passed name is bb-3
+Lookup: len is 4 name is aa-3, passed name is bb-3
+Lookup: len is 4 name is aa-4, passed name is bb-3
+Lookup: len is 4 name is aa-5, passed name is bb-3
+Lookup: len is 4 name is aa-6, passed name is bb-3
+Lookup: len is 4 name is aa-7, passed name is bb-3
+Lookup: len is 4 name is aa-8, passed name is bb-3
+Lookup: len is 4 name is aa-9, passed name is bb-3
+Lookup: len is 4 name is bb-0, passed name is bb-3
+Lookup: len is 4 name is bb-1, passed name is bb-3
+Lookup: len is 4 name is bb-2, passed name is bb-3
+   unique: 162, error: -2 (No such file or directory), outsize: 16
+unique: 163, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-3
+Lookup: len is 4 name is aa-1, passed name is bb-3
+Lookup: len is 4 name is aa-2, passed name is bb-3
+Lookup: len is 4 name is aa-3, passed name is bb-3
+Lookup: len is 4 name is aa-4, passed name is bb-3
+Lookup: len is 4 name is aa-5, passed name is bb-3
+Lookup: len is 4 name is aa-6, passed name is bb-3
+Lookup: len is 4 name is aa-7, passed name is bb-3
+Lookup: len is 4 name is aa-8, passed name is bb-3
+Lookup: len is 4 name is aa-9, passed name is bb-3
+Lookup: len is 4 name is bb-0, passed name is bb-3
+Lookup: len is 4 name is bb-1, passed name is bb-3
+Lookup: len is 4 name is bb-2, passed name is bb-3
+ec create
+yfs:create file name bb-3 inum 16
+isfile: 16 is a file
+getfile 0000000000000010
+getfile 0000000000000010 -> sz 0
+   unique: 163, success, outsize: 160
+OK: create returns.
+unique: 164, opcode: WRITE (16), nodeid: 16, insize: 84, pid: 247
+yfs:write inum 16
+   unique: 164, success, outsize: 24
+unique: 165, opcode: RELEASE (18), nodeid: 16, insize: 64, pid: 0
+   unique: 165, success, outsize: 16
+unique: 166, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 166, success, outsize: 144
+unique: 167, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-4
+Lookup: len is 4 name is aa-1, passed name is bb-4
+Lookup: len is 4 name is aa-2, passed name is bb-4
+Lookup: len is 4 name is aa-3, passed name is bb-4
+Lookup: len is 4 name is aa-4, passed name is bb-4
+Lookup: len is 4 name is aa-5, passed name is bb-4
+Lookup: len is 4 name is aa-6, passed name is bb-4
+Lookup: len is 4 name is aa-7, passed name is bb-4
+Lookup: len is 4 name is aa-8, passed name is bb-4
+Lookup: len is 4 name is aa-9, passed name is bb-4
+Lookup: len is 4 name is bb-0, passed name is bb-4
+Lookup: len is 4 name is bb-1, passed name is bb-4
+Lookup: len is 4 name is bb-2, passed name is bb-4
+Lookup: len is 4 name is bb-3, passed name is bb-4
+   unique: 167, error: -2 (No such file or directory), outsize: 16
+unique: 168, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-4
+Lookup: len is 4 name is aa-1, passed name is bb-4
+Lookup: len is 4 name is aa-2, passed name is bb-4
+Lookup: len is 4 name is aa-3, passed name is bb-4
+Lookup: len is 4 name is aa-4, passed name is bb-4
+Lookup: len is 4 name is aa-5, passed name is bb-4
+Lookup: len is 4 name is aa-6, passed name is bb-4
+Lookup: len is 4 name is aa-7, passed name is bb-4
+Lookup: len is 4 name is aa-8, passed name is bb-4
+Lookup: len is 4 name is aa-9, passed name is bb-4
+Lookup: len is 4 name is bb-0, passed name is bb-4
+Lookup: len is 4 name is bb-1, passed name is bb-4
+Lookup: len is 4 name is bb-2, passed name is bb-4
+Lookup: len is 4 name is bb-3, passed name is bb-4
+ec create
+yfs:create file name bb-4 inum 17
+isfile: 17 is a file
+getfile 0000000000000011
+getfile 0000000000000011 -> sz 0
+   unique: 168, success, outsize: 160
+OK: create returns.
+unique: 169, opcode: WRITE (16), nodeid: 17, insize: 84, pid: 247
+yfs:write inum 17
+   unique: 169, success, outsize: 24
+unique: 170, opcode: RELEASE (18), nodeid: 17, insize: 64, pid: 0
+   unique: 170, success, outsize: 16
+unique: 171, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 171, success, outsize: 144
+unique: 172, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-5
+Lookup: len is 4 name is aa-1, passed name is bb-5
+Lookup: len is 4 name is aa-2, passed name is bb-5
+Lookup: len is 4 name is aa-3, passed name is bb-5
+Lookup: len is 4 name is aa-4, passed name is bb-5
+Lookup: len is 4 name is aa-5, passed name is bb-5
+Lookup: len is 4 name is aa-6, passed name is bb-5
+Lookup: len is 4 name is aa-7, passed name is bb-5
+Lookup: len is 4 name is aa-8, passed name is bb-5
+Lookup: len is 4 name is aa-9, passed name is bb-5
+Lookup: len is 4 name is bb-0, passed name is bb-5
+Lookup: len is 4 name is bb-1, passed name is bb-5
+Lookup: len is 4 name is bb-2, passed name is bb-5
+Lookup: len is 4 name is bb-3, passed name is bb-5
+Lookup: len is 4 name is bb-4, passed name is bb-5
+   unique: 172, error: -2 (No such file or directory), outsize: 16
+unique: 173, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-5
+Lookup: len is 4 name is aa-1, passed name is bb-5
+Lookup: len is 4 name is aa-2, passed name is bb-5
+Lookup: len is 4 name is aa-3, passed name is bb-5
+Lookup: len is 4 name is aa-4, passed name is bb-5
+Lookup: len is 4 name is aa-5, passed name is bb-5
+Lookup: len is 4 name is aa-6, passed name is bb-5
+Lookup: len is 4 name is aa-7, passed name is bb-5
+Lookup: len is 4 name is aa-8, passed name is bb-5
+Lookup: len is 4 name is aa-9, passed name is bb-5
+Lookup: len is 4 name is bb-0, passed name is bb-5
+Lookup: len is 4 name is bb-1, passed name is bb-5
+Lookup: len is 4 name is bb-2, passed name is bb-5
+Lookup: len is 4 name is bb-3, passed name is bb-5
+Lookup: len is 4 name is bb-4, passed name is bb-5
+ec create
+yfs:create file name bb-5 inum 18
+isfile: 18 is a file
+getfile 0000000000000012
+getfile 0000000000000012 -> sz 0
+   unique: 173, success, outsize: 160
+OK: create returns.
+unique: 174, opcode: WRITE (16), nodeid: 18, insize: 84, pid: 247
+yfs:write inum 18
+   unique: 174, success, outsize: 24
+unique: 175, opcode: RELEASE (18), nodeid: 18, insize: 64, pid: 0
+   unique: 175, success, outsize: 16
+unique: 176, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 176, success, outsize: 144
+unique: 177, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-6
+Lookup: len is 4 name is aa-1, passed name is bb-6
+Lookup: len is 4 name is aa-2, passed name is bb-6
+Lookup: len is 4 name is aa-3, passed name is bb-6
+Lookup: len is 4 name is aa-4, passed name is bb-6
+Lookup: len is 4 name is aa-5, passed name is bb-6
+Lookup: len is 4 name is aa-6, passed name is bb-6
+Lookup: len is 4 name is aa-7, passed name is bb-6
+Lookup: len is 4 name is aa-8, passed name is bb-6
+Lookup: len is 4 name is aa-9, passed name is bb-6
+Lookup: len is 4 name is bb-0, passed name is bb-6
+Lookup: len is 4 name is bb-1, passed name is bb-6
+Lookup: len is 4 name is bb-2, passed name is bb-6
+Lookup: len is 4 name is bb-3, passed name is bb-6
+Lookup: len is 4 name is bb-4, passed name is bb-6
+Lookup: len is 4 name is bb-5, passed name is bb-6
+   unique: 177, error: -2 (No such file or directory), outsize: 16
+unique: 178, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-6
+Lookup: len is 4 name is aa-1, passed name is bb-6
+Lookup: len is 4 name is aa-2, passed name is bb-6
+Lookup: len is 4 name is aa-3, passed name is bb-6
+Lookup: len is 4 name is aa-4, passed name is bb-6
+Lookup: len is 4 name is aa-5, passed name is bb-6
+Lookup: len is 4 name is aa-6, passed name is bb-6
+Lookup: len is 4 name is aa-7, passed name is bb-6
+Lookup: len is 4 name is aa-8, passed name is bb-6
+Lookup: len is 4 name is aa-9, passed name is bb-6
+Lookup: len is 4 name is bb-0, passed name is bb-6
+Lookup: len is 4 name is bb-1, passed name is bb-6
+Lookup: len is 4 name is bb-2, passed name is bb-6
+Lookup: len is 4 name is bb-3, passed name is bb-6
+Lookup: len is 4 name is bb-4, passed name is bb-6
+Lookup: len is 4 name is bb-5, passed name is bb-6
+ec create
+yfs:create file name bb-6 inum 19
+isfile: 19 is a file
+getfile 0000000000000013
+getfile 0000000000000013 -> sz 0
+   unique: 178, success, outsize: 160
+OK: create returns.
+unique: 179, opcode: WRITE (16), nodeid: 19, insize: 84, pid: 247
+yfs:write inum 19
+   unique: 179, success, outsize: 24
+unique: 180, opcode: RELEASE (18), nodeid: 19, insize: 64, pid: 0
+   unique: 180, success, outsize: 16
+unique: 181, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 181, success, outsize: 144
+unique: 182, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-7
+Lookup: len is 4 name is aa-1, passed name is bb-7
+Lookup: len is 4 name is aa-2, passed name is bb-7
+Lookup: len is 4 name is aa-3, passed name is bb-7
+Lookup: len is 4 name is aa-4, passed name is bb-7
+Lookup: len is 4 name is aa-5, passed name is bb-7
+Lookup: len is 4 name is aa-6, passed name is bb-7
+Lookup: len is 4 name is aa-7, passed name is bb-7
+Lookup: len is 4 name is aa-8, passed name is bb-7
+Lookup: len is 4 name is aa-9, passed name is bb-7
+Lookup: len is 4 name is bb-0, passed name is bb-7
+Lookup: len is 4 name is bb-1, passed name is bb-7
+Lookup: len is 4 name is bb-2, passed name is bb-7
+Lookup: len is 4 name is bb-3, passed name is bb-7
+Lookup: len is 4 name is bb-4, passed name is bb-7
+Lookup: len is 4 name is bb-5, passed name is bb-7
+Lookup: len is 4 name is bb-6, passed name is bb-7
+   unique: 182, error: -2 (No such file or directory), outsize: 16
+unique: 183, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-7
+Lookup: len is 4 name is aa-1, passed name is bb-7
+Lookup: len is 4 name is aa-2, passed name is bb-7
+Lookup: len is 4 name is aa-3, passed name is bb-7
+Lookup: len is 4 name is aa-4, passed name is bb-7
+Lookup: len is 4 name is aa-5, passed name is bb-7
+Lookup: len is 4 name is aa-6, passed name is bb-7
+Lookup: len is 4 name is aa-7, passed name is bb-7
+Lookup: len is 4 name is aa-8, passed name is bb-7
+Lookup: len is 4 name is aa-9, passed name is bb-7
+Lookup: len is 4 name is bb-0, passed name is bb-7
+Lookup: len is 4 name is bb-1, passed name is bb-7
+Lookup: len is 4 name is bb-2, passed name is bb-7
+Lookup: len is 4 name is bb-3, passed name is bb-7
+Lookup: len is 4 name is bb-4, passed name is bb-7
+Lookup: len is 4 name is bb-5, passed name is bb-7
+Lookup: len is 4 name is bb-6, passed name is bb-7
+ec create
+yfs:create file name bb-7 inum 20
+isfile: 20 is a file
+getfile 0000000000000014
+getfile 0000000000000014 -> sz 0
+   unique: 183, success, outsize: 160
+OK: create returns.
+unique: 184, opcode: WRITE (16), nodeid: 20, insize: 84, pid: 247
+yfs:write inum 20
+   unique: 184, success, outsize: 24
+unique: 185, opcode: RELEASE (18), nodeid: 20, insize: 64, pid: 0
+   unique: 185, success, outsize: 16
+unique: 186, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 186, success, outsize: 144
+unique: 187, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-8
+Lookup: len is 4 name is aa-1, passed name is bb-8
+Lookup: len is 4 name is aa-2, passed name is bb-8
+Lookup: len is 4 name is aa-3, passed name is bb-8
+Lookup: len is 4 name is aa-4, passed name is bb-8
+Lookup: len is 4 name is aa-5, passed name is bb-8
+Lookup: len is 4 name is aa-6, passed name is bb-8
+Lookup: len is 4 name is aa-7, passed name is bb-8
+Lookup: len is 4 name is aa-8, passed name is bb-8
+Lookup: len is 4 name is aa-9, passed name is bb-8
+Lookup: len is 4 name is bb-0, passed name is bb-8
+Lookup: len is 4 name is bb-1, passed name is bb-8
+Lookup: len is 4 name is bb-2, passed name is bb-8
+Lookup: len is 4 name is bb-3, passed name is bb-8
+Lookup: len is 4 name is bb-4, passed name is bb-8
+Lookup: len is 4 name is bb-5, passed name is bb-8
+Lookup: len is 4 name is bb-6, passed name is bb-8
+Lookup: len is 4 name is bb-7, passed name is bb-8
+   unique: 187, error: -2 (No such file or directory), outsize: 16
+unique: 188, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-8
+Lookup: len is 4 name is aa-1, passed name is bb-8
+Lookup: len is 4 name is aa-2, passed name is bb-8
+Lookup: len is 4 name is aa-3, passed name is bb-8
+Lookup: len is 4 name is aa-4, passed name is bb-8
+Lookup: len is 4 name is aa-5, passed name is bb-8
+Lookup: len is 4 name is aa-6, passed name is bb-8
+Lookup: len is 4 name is aa-7, passed name is bb-8
+Lookup: len is 4 name is aa-8, passed name is bb-8
+Lookup: len is 4 name is aa-9, passed name is bb-8
+Lookup: len is 4 name is bb-0, passed name is bb-8
+Lookup: len is 4 name is bb-1, passed name is bb-8
+Lookup: len is 4 name is bb-2, passed name is bb-8
+Lookup: len is 4 name is bb-3, passed name is bb-8
+Lookup: len is 4 name is bb-4, passed name is bb-8
+Lookup: len is 4 name is bb-5, passed name is bb-8
+Lookup: len is 4 name is bb-6, passed name is bb-8
+Lookup: len is 4 name is bb-7, passed name is bb-8
+ec create
+yfs:create file name bb-8 inum 21
+isfile: 21 is a file
+getfile 0000000000000015
+getfile 0000000000000015 -> sz 0
+   unique: 188, success, outsize: 160
+OK: create returns.
+unique: 189, opcode: WRITE (16), nodeid: 21, insize: 84, pid: 247
+yfs:write inum 21
+   unique: 189, success, outsize: 24
+unique: 190, opcode: RELEASE (18), nodeid: 21, insize: 64, pid: 0
+   unique: 190, success, outsize: 16
+unique: 191, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 191, success, outsize: 144
+unique: 192, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-9
+Lookup: len is 4 name is aa-1, passed name is bb-9
+Lookup: len is 4 name is aa-2, passed name is bb-9
+Lookup: len is 4 name is aa-3, passed name is bb-9
+Lookup: len is 4 name is aa-4, passed name is bb-9
+Lookup: len is 4 name is aa-5, passed name is bb-9
+Lookup: len is 4 name is aa-6, passed name is bb-9
+Lookup: len is 4 name is aa-7, passed name is bb-9
+Lookup: len is 4 name is aa-8, passed name is bb-9
+Lookup: len is 4 name is aa-9, passed name is bb-9
+Lookup: len is 4 name is bb-0, passed name is bb-9
+Lookup: len is 4 name is bb-1, passed name is bb-9
+Lookup: len is 4 name is bb-2, passed name is bb-9
+Lookup: len is 4 name is bb-3, passed name is bb-9
+Lookup: len is 4 name is bb-4, passed name is bb-9
+Lookup: len is 4 name is bb-5, passed name is bb-9
+Lookup: len is 4 name is bb-6, passed name is bb-9
+Lookup: len is 4 name is bb-7, passed name is bb-9
+Lookup: len is 4 name is bb-8, passed name is bb-9
+   unique: 192, error: -2 (No such file or directory), outsize: 16
+unique: 193, opcode: CREATE (35), nodeid: 2, insize: 61, pid: 247
+create lookup
+yfs:lookup file name bb-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-9
+Lookup: len is 4 name is aa-1, passed name is bb-9
+Lookup: len is 4 name is aa-2, passed name is bb-9
+Lookup: len is 4 name is aa-3, passed name is bb-9
+Lookup: len is 4 name is aa-4, passed name is bb-9
+Lookup: len is 4 name is aa-5, passed name is bb-9
+Lookup: len is 4 name is aa-6, passed name is bb-9
+Lookup: len is 4 name is aa-7, passed name is bb-9
+Lookup: len is 4 name is aa-8, passed name is bb-9
+Lookup: len is 4 name is aa-9, passed name is bb-9
+Lookup: len is 4 name is bb-0, passed name is bb-9
+Lookup: len is 4 name is bb-1, passed name is bb-9
+Lookup: len is 4 name is bb-2, passed name is bb-9
+Lookup: len is 4 name is bb-3, passed name is bb-9
+Lookup: len is 4 name is bb-4, passed name is bb-9
+Lookup: len is 4 name is bb-5, passed name is bb-9
+Lookup: len is 4 name is bb-6, passed name is bb-9
+Lookup: len is 4 name is bb-7, passed name is bb-9
+Lookup: len is 4 name is bb-8, passed name is bb-9
+ec create
+yfs:create file name bb-9 inum 22
+isfile: 22 is a file
+getfile 0000000000000016
+getfile 0000000000000016 -> sz 0
+   unique: 193, success, outsize: 160
+OK: create returns.
+unique: 194, opcode: WRITE (16), nodeid: 22, insize: 84, pid: 247
+yfs:write inum 22
+   unique: 194, success, outsize: 24
+unique: 195, opcode: RELEASE (18), nodeid: 22, insize: 64, pid: 0
+   unique: 195, success, outsize: 16
+commit a new version
+ec commit
+unique: 196, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 196, success, outsize: 144
+unique: 197, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 197, success, outsize: 32
+unique: 198, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 198, success, outsize: 120
+unique: 199, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name aa-0, file inum 3
+readdir dir 2, file name aa-1, file inum 4
+readdir dir 2, file name aa-2, file inum 5
+readdir dir 2, file name aa-3, file inum 6
+readdir dir 2, file name aa-4, file inum 7
+readdir dir 2, file name aa-5, file inum 8
+readdir dir 2, file name aa-6, file inum 9
+readdir dir 2, file name aa-7, file inum 10
+readdir dir 2, file name aa-8, file inum 11
+readdir dir 2, file name aa-9, file inum 12
+readdir dir 2, file name bb-0, file inum 13
+readdir dir 2, file name bb-1, file inum 14
+readdir dir 2, file name bb-2, file inum 15
+readdir dir 2, file name bb-3, file inum 16
+readdir dir 2, file name bb-4, file inum 17
+readdir dir 2, file name bb-5, file inum 18
+readdir dir 2, file name bb-6, file inum 19
+readdir dir 2, file name bb-7, file inum 20
+readdir dir 2, file name bb-8, file inum 21
+readdir dir 2, file name bb-9, file inum 22
+   unique: 199, success, outsize: 656
+unique: 200, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name aa-0, file inum 3
+readdir dir 2, file name aa-1, file inum 4
+readdir dir 2, file name aa-2, file inum 5
+readdir dir 2, file name aa-3, file inum 6
+readdir dir 2, file name aa-4, file inum 7
+readdir dir 2, file name aa-5, file inum 8
+readdir dir 2, file name aa-6, file inum 9
+readdir dir 2, file name aa-7, file inum 10
+readdir dir 2, file name aa-8, file inum 11
+readdir dir 2, file name aa-9, file inum 12
+readdir dir 2, file name bb-0, file inum 13
+readdir dir 2, file name bb-1, file inum 14
+readdir dir 2, file name bb-2, file inum 15
+readdir dir 2, file name bb-3, file inum 16
+readdir dir 2, file name bb-4, file inum 17
+readdir dir 2, file name bb-5, file inum 18
+readdir dir 2, file name bb-6, file inum 19
+readdir dir 2, file name bb-7, file inum 20
+readdir dir 2, file name bb-8, file inum 21
+readdir dir 2, file name bb-9, file inum 22
+   unique: 200, success, outsize: 16
+unique: 201, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 201, success, outsize: 16
+unique: 202, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 202, success, outsize: 144
+unique: 203, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-0
+Lookup success: name aa-0 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 4
+   unique: 203, success, outsize: 144
+unique: 204, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 204, success, outsize: 32
+unique: 205, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 205, success, outsize: 20
+unique: 206, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 206, success, outsize: 16
+unique: 207, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 207, success, outsize: 144
+unique: 208, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-1
+Lookup: len is 4 name is aa-1, passed name is aa-1
+Lookup success: name aa-1 inum 4
+isfile: 4 is a file
+getfile 0000000000000004
+getfile 0000000000000004 -> sz 4
+   unique: 208, success, outsize: 144
+unique: 209, opcode: OPEN (14), nodeid: 4, insize: 48, pid: 247
+   unique: 209, success, outsize: 32
+unique: 210, opcode: READ (15), nodeid: 4, insize: 80, pid: 247
+   unique: 210, success, outsize: 20
+unique: 211, opcode: RELEASE (18), nodeid: 4, insize: 64, pid: 0
+   unique: 211, success, outsize: 16
+unique: 212, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 212, success, outsize: 144
+unique: 213, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-2
+Lookup: len is 4 name is aa-1, passed name is aa-2
+Lookup: len is 4 name is aa-2, passed name is aa-2
+Lookup success: name aa-2 inum 5
+isfile: 5 is a file
+getfile 0000000000000005
+getfile 0000000000000005 -> sz 4
+   unique: 213, success, outsize: 144
+unique: 214, opcode: OPEN (14), nodeid: 5, insize: 48, pid: 247
+   unique: 214, success, outsize: 32
+unique: 215, opcode: READ (15), nodeid: 5, insize: 80, pid: 247
+   unique: 215, success, outsize: 20
+unique: 216, opcode: RELEASE (18), nodeid: 5, insize: 64, pid: 0
+   unique: 216, success, outsize: 16
+unique: 217, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 217, success, outsize: 144
+unique: 218, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-3
+Lookup: len is 4 name is aa-1, passed name is aa-3
+Lookup: len is 4 name is aa-2, passed name is aa-3
+Lookup: len is 4 name is aa-3, passed name is aa-3
+Lookup success: name aa-3 inum 6
+isfile: 6 is a file
+getfile 0000000000000006
+getfile 0000000000000006 -> sz 4
+   unique: 218, success, outsize: 144
+unique: 219, opcode: OPEN (14), nodeid: 6, insize: 48, pid: 247
+   unique: 219, success, outsize: 32
+unique: 220, opcode: READ (15), nodeid: 6, insize: 80, pid: 247
+   unique: 220, success, outsize: 20
+unique: 221, opcode: RELEASE (18), nodeid: 6, insize: 64, pid: 0
+   unique: 221, success, outsize: 16
+unique: 222, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 222, success, outsize: 144
+unique: 223, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-4
+Lookup: len is 4 name is aa-1, passed name is aa-4
+Lookup: len is 4 name is aa-2, passed name is aa-4
+Lookup: len is 4 name is aa-3, passed name is aa-4
+Lookup: len is 4 name is aa-4, passed name is aa-4
+Lookup success: name aa-4 inum 7
+isfile: 7 is a file
+getfile 0000000000000007
+getfile 0000000000000007 -> sz 4
+   unique: 223, success, outsize: 144
+unique: 224, opcode: OPEN (14), nodeid: 7, insize: 48, pid: 247
+   unique: 224, success, outsize: 32
+unique: 225, opcode: READ (15), nodeid: 7, insize: 80, pid: 247
+   unique: 225, success, outsize: 20
+unique: 226, opcode: RELEASE (18), nodeid: 7, insize: 64, pid: 0
+   unique: 226, success, outsize: 16
+unique: 227, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 227, success, outsize: 144
+unique: 228, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-5
+Lookup: len is 4 name is aa-1, passed name is aa-5
+Lookup: len is 4 name is aa-2, passed name is aa-5
+Lookup: len is 4 name is aa-3, passed name is aa-5
+Lookup: len is 4 name is aa-4, passed name is aa-5
+Lookup: len is 4 name is aa-5, passed name is aa-5
+Lookup success: name aa-5 inum 8
+isfile: 8 is a file
+getfile 0000000000000008
+getfile 0000000000000008 -> sz 4
+   unique: 228, success, outsize: 144
+unique: 229, opcode: OPEN (14), nodeid: 8, insize: 48, pid: 247
+   unique: 229, success, outsize: 32
+unique: 230, opcode: READ (15), nodeid: 8, insize: 80, pid: 247
+   unique: 230, success, outsize: 20
+unique: 231, opcode: RELEASE (18), nodeid: 8, insize: 64, pid: 0
+   unique: 231, success, outsize: 16
+unique: 232, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 232, success, outsize: 144
+unique: 233, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-6
+Lookup: len is 4 name is aa-1, passed name is aa-6
+Lookup: len is 4 name is aa-2, passed name is aa-6
+Lookup: len is 4 name is aa-3, passed name is aa-6
+Lookup: len is 4 name is aa-4, passed name is aa-6
+Lookup: len is 4 name is aa-5, passed name is aa-6
+Lookup: len is 4 name is aa-6, passed name is aa-6
+Lookup success: name aa-6 inum 9
+isfile: 9 is a file
+getfile 0000000000000009
+getfile 0000000000000009 -> sz 4
+   unique: 233, success, outsize: 144
+unique: 234, opcode: OPEN (14), nodeid: 9, insize: 48, pid: 247
+   unique: 234, success, outsize: 32
+unique: 235, opcode: READ (15), nodeid: 9, insize: 80, pid: 247
+   unique: 235, success, outsize: 20
+unique: 236, opcode: RELEASE (18), nodeid: 9, insize: 64, pid: 0
+   unique: 236, success, outsize: 16
+unique: 237, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 237, success, outsize: 144
+unique: 238, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-7
+Lookup: len is 4 name is aa-1, passed name is aa-7
+Lookup: len is 4 name is aa-2, passed name is aa-7
+Lookup: len is 4 name is aa-3, passed name is aa-7
+Lookup: len is 4 name is aa-4, passed name is aa-7
+Lookup: len is 4 name is aa-5, passed name is aa-7
+Lookup: len is 4 name is aa-6, passed name is aa-7
+Lookup: len is 4 name is aa-7, passed name is aa-7
+Lookup success: name aa-7 inum 10
+isfile: 10 is a file
+getfile 000000000000000a
+getfile 000000000000000a -> sz 4
+   unique: 238, success, outsize: 144
+unique: 239, opcode: OPEN (14), nodeid: 10, insize: 48, pid: 247
+   unique: 239, success, outsize: 32
+unique: 240, opcode: READ (15), nodeid: 10, insize: 80, pid: 247
+   unique: 240, success, outsize: 20
+unique: 241, opcode: RELEASE (18), nodeid: 10, insize: 64, pid: 0
+   unique: 241, success, outsize: 16
+unique: 242, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 242, success, outsize: 144
+unique: 243, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-8
+Lookup: len is 4 name is aa-1, passed name is aa-8
+Lookup: len is 4 name is aa-2, passed name is aa-8
+Lookup: len is 4 name is aa-3, passed name is aa-8
+Lookup: len is 4 name is aa-4, passed name is aa-8
+Lookup: len is 4 name is aa-5, passed name is aa-8
+Lookup: len is 4 name is aa-6, passed name is aa-8
+Lookup: len is 4 name is aa-7, passed name is aa-8
+Lookup: len is 4 name is aa-8, passed name is aa-8
+Lookup success: name aa-8 inum 11
+isfile: 11 is a file
+getfile 000000000000000b
+getfile 000000000000000b -> sz 4
+   unique: 243, success, outsize: 144
+unique: 244, opcode: OPEN (14), nodeid: 11, insize: 48, pid: 247
+   unique: 244, success, outsize: 32
+unique: 245, opcode: READ (15), nodeid: 11, insize: 80, pid: 247
+   unique: 245, success, outsize: 20
+unique: 246, opcode: RELEASE (18), nodeid: 11, insize: 64, pid: 0
+   unique: 246, success, outsize: 16
+unique: 247, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 247, success, outsize: 144
+unique: 248, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-9
+Lookup: len is 4 name is aa-1, passed name is aa-9
+Lookup: len is 4 name is aa-2, passed name is aa-9
+Lookup: len is 4 name is aa-3, passed name is aa-9
+Lookup: len is 4 name is aa-4, passed name is aa-9
+Lookup: len is 4 name is aa-5, passed name is aa-9
+Lookup: len is 4 name is aa-6, passed name is aa-9
+Lookup: len is 4 name is aa-7, passed name is aa-9
+Lookup: len is 4 name is aa-8, passed name is aa-9
+Lookup: len is 4 name is aa-9, passed name is aa-9
+Lookup success: name aa-9 inum 12
+isfile: 12 is a file
+getfile 000000000000000c
+getfile 000000000000000c -> sz 4
+   unique: 248, success, outsize: 144
+unique: 249, opcode: OPEN (14), nodeid: 12, insize: 48, pid: 247
+   unique: 249, success, outsize: 32
+unique: 250, opcode: READ (15), nodeid: 12, insize: 80, pid: 247
+   unique: 250, success, outsize: 20
+unique: 251, opcode: RELEASE (18), nodeid: 12, insize: 64, pid: 0
+   unique: 251, success, outsize: 16
+unique: 252, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 252, success, outsize: 144
+unique: 253, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-0
+Lookup: len is 4 name is aa-1, passed name is bb-0
+Lookup: len is 4 name is aa-2, passed name is bb-0
+Lookup: len is 4 name is aa-3, passed name is bb-0
+Lookup: len is 4 name is aa-4, passed name is bb-0
+Lookup: len is 4 name is aa-5, passed name is bb-0
+Lookup: len is 4 name is aa-6, passed name is bb-0
+Lookup: len is 4 name is aa-7, passed name is bb-0
+Lookup: len is 4 name is aa-8, passed name is bb-0
+Lookup: len is 4 name is aa-9, passed name is bb-0
+Lookup: len is 4 name is bb-0, passed name is bb-0
+Lookup success: name bb-0 inum 13
+isfile: 13 is a file
+getfile 000000000000000d
+getfile 000000000000000d -> sz 4
+   unique: 253, success, outsize: 144
+unique: 254, opcode: OPEN (14), nodeid: 13, insize: 48, pid: 247
+   unique: 254, success, outsize: 32
+unique: 255, opcode: READ (15), nodeid: 13, insize: 80, pid: 247
+   unique: 255, success, outsize: 20
+unique: 256, opcode: RELEASE (18), nodeid: 13, insize: 64, pid: 0
+   unique: 256, success, outsize: 16
+unique: 257, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 257, success, outsize: 144
+unique: 258, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-1
+Lookup: len is 4 name is aa-1, passed name is bb-1
+Lookup: len is 4 name is aa-2, passed name is bb-1
+Lookup: len is 4 name is aa-3, passed name is bb-1
+Lookup: len is 4 name is aa-4, passed name is bb-1
+Lookup: len is 4 name is aa-5, passed name is bb-1
+Lookup: len is 4 name is aa-6, passed name is bb-1
+Lookup: len is 4 name is aa-7, passed name is bb-1
+Lookup: len is 4 name is aa-8, passed name is bb-1
+Lookup: len is 4 name is aa-9, passed name is bb-1
+Lookup: len is 4 name is bb-0, passed name is bb-1
+Lookup: len is 4 name is bb-1, passed name is bb-1
+Lookup success: name bb-1 inum 14
+isfile: 14 is a file
+getfile 000000000000000e
+getfile 000000000000000e -> sz 4
+   unique: 258, success, outsize: 144
+unique: 259, opcode: OPEN (14), nodeid: 14, insize: 48, pid: 247
+   unique: 259, success, outsize: 32
+unique: 260, opcode: READ (15), nodeid: 14, insize: 80, pid: 247
+   unique: 260, success, outsize: 20
+unique: 261, opcode: RELEASE (18), nodeid: 14, insize: 64, pid: 0
+   unique: 261, success, outsize: 16
+unique: 262, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 262, success, outsize: 144
+unique: 263, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-2
+Lookup: len is 4 name is aa-1, passed name is bb-2
+Lookup: len is 4 name is aa-2, passed name is bb-2
+Lookup: len is 4 name is aa-3, passed name is bb-2
+Lookup: len is 4 name is aa-4, passed name is bb-2
+Lookup: len is 4 name is aa-5, passed name is bb-2
+Lookup: len is 4 name is aa-6, passed name is bb-2
+Lookup: len is 4 name is aa-7, passed name is bb-2
+Lookup: len is 4 name is aa-8, passed name is bb-2
+Lookup: len is 4 name is aa-9, passed name is bb-2
+Lookup: len is 4 name is bb-0, passed name is bb-2
+Lookup: len is 4 name is bb-1, passed name is bb-2
+Lookup: len is 4 name is bb-2, passed name is bb-2
+Lookup success: name bb-2 inum 15
+isfile: 15 is a file
+getfile 000000000000000f
+getfile 000000000000000f -> sz 4
+   unique: 263, success, outsize: 144
+unique: 264, opcode: OPEN (14), nodeid: 15, insize: 48, pid: 247
+   unique: 264, success, outsize: 32
+unique: 265, opcode: READ (15), nodeid: 15, insize: 80, pid: 247
+   unique: 265, success, outsize: 20
+unique: 266, opcode: RELEASE (18), nodeid: 15, insize: 64, pid: 0
+   unique: 266, success, outsize: 16
+unique: 267, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 267, success, outsize: 144
+unique: 268, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-3
+Lookup: len is 4 name is aa-1, passed name is bb-3
+Lookup: len is 4 name is aa-2, passed name is bb-3
+Lookup: len is 4 name is aa-3, passed name is bb-3
+Lookup: len is 4 name is aa-4, passed name is bb-3
+Lookup: len is 4 name is aa-5, passed name is bb-3
+Lookup: len is 4 name is aa-6, passed name is bb-3
+Lookup: len is 4 name is aa-7, passed name is bb-3
+Lookup: len is 4 name is aa-8, passed name is bb-3
+Lookup: len is 4 name is aa-9, passed name is bb-3
+Lookup: len is 4 name is bb-0, passed name is bb-3
+Lookup: len is 4 name is bb-1, passed name is bb-3
+Lookup: len is 4 name is bb-2, passed name is bb-3
+Lookup: len is 4 name is bb-3, passed name is bb-3
+Lookup success: name bb-3 inum 16
+isfile: 16 is a file
+getfile 0000000000000010
+getfile 0000000000000010 -> sz 4
+   unique: 268, success, outsize: 144
+unique: 269, opcode: OPEN (14), nodeid: 16, insize: 48, pid: 247
+   unique: 269, success, outsize: 32
+unique: 270, opcode: READ (15), nodeid: 16, insize: 80, pid: 247
+   unique: 270, success, outsize: 20
+unique: 271, opcode: RELEASE (18), nodeid: 16, insize: 64, pid: 0
+   unique: 271, success, outsize: 16
+unique: 272, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 272, success, outsize: 144
+unique: 273, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-4
+Lookup: len is 4 name is aa-1, passed name is bb-4
+Lookup: len is 4 name is aa-2, passed name is bb-4
+Lookup: len is 4 name is aa-3, passed name is bb-4
+Lookup: len is 4 name is aa-4, passed name is bb-4
+Lookup: len is 4 name is aa-5, passed name is bb-4
+Lookup: len is 4 name is aa-6, passed name is bb-4
+Lookup: len is 4 name is aa-7, passed name is bb-4
+Lookup: len is 4 name is aa-8, passed name is bb-4
+Lookup: len is 4 name is aa-9, passed name is bb-4
+Lookup: len is 4 name is bb-0, passed name is bb-4
+Lookup: len is 4 name is bb-1, passed name is bb-4
+Lookup: len is 4 name is bb-2, passed name is bb-4
+Lookup: len is 4 name is bb-3, passed name is bb-4
+Lookup: len is 4 name is bb-4, passed name is bb-4
+Lookup success: name bb-4 inum 17
+isfile: 17 is a file
+getfile 0000000000000011
+getfile 0000000000000011 -> sz 4
+   unique: 273, success, outsize: 144
+unique: 274, opcode: OPEN (14), nodeid: 17, insize: 48, pid: 247
+   unique: 274, success, outsize: 32
+unique: 275, opcode: READ (15), nodeid: 17, insize: 80, pid: 247
+   unique: 275, success, outsize: 20
+unique: 276, opcode: RELEASE (18), nodeid: 17, insize: 64, pid: 0
+   unique: 276, success, outsize: 16
+unique: 277, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 277, success, outsize: 144
+unique: 278, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-5
+Lookup: len is 4 name is aa-1, passed name is bb-5
+Lookup: len is 4 name is aa-2, passed name is bb-5
+Lookup: len is 4 name is aa-3, passed name is bb-5
+Lookup: len is 4 name is aa-4, passed name is bb-5
+Lookup: len is 4 name is aa-5, passed name is bb-5
+Lookup: len is 4 name is aa-6, passed name is bb-5
+Lookup: len is 4 name is aa-7, passed name is bb-5
+Lookup: len is 4 name is aa-8, passed name is bb-5
+Lookup: len is 4 name is aa-9, passed name is bb-5
+Lookup: len is 4 name is bb-0, passed name is bb-5
+Lookup: len is 4 name is bb-1, passed name is bb-5
+Lookup: len is 4 name is bb-2, passed name is bb-5
+Lookup: len is 4 name is bb-3, passed name is bb-5
+Lookup: len is 4 name is bb-4, passed name is bb-5
+Lookup: len is 4 name is bb-5, passed name is bb-5
+Lookup success: name bb-5 inum 18
+isfile: 18 is a file
+getfile 0000000000000012
+getfile 0000000000000012 -> sz 4
+   unique: 278, success, outsize: 144
+unique: 279, opcode: OPEN (14), nodeid: 18, insize: 48, pid: 247
+   unique: 279, success, outsize: 32
+unique: 280, opcode: READ (15), nodeid: 18, insize: 80, pid: 247
+   unique: 280, success, outsize: 20
+unique: 281, opcode: RELEASE (18), nodeid: 18, insize: 64, pid: 0
+   unique: 281, success, outsize: 16
+unique: 282, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 282, success, outsize: 144
+unique: 283, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-6
+Lookup: len is 4 name is aa-1, passed name is bb-6
+Lookup: len is 4 name is aa-2, passed name is bb-6
+Lookup: len is 4 name is aa-3, passed name is bb-6
+Lookup: len is 4 name is aa-4, passed name is bb-6
+Lookup: len is 4 name is aa-5, passed name is bb-6
+Lookup: len is 4 name is aa-6, passed name is bb-6
+Lookup: len is 4 name is aa-7, passed name is bb-6
+Lookup: len is 4 name is aa-8, passed name is bb-6
+Lookup: len is 4 name is aa-9, passed name is bb-6
+Lookup: len is 4 name is bb-0, passed name is bb-6
+Lookup: len is 4 name is bb-1, passed name is bb-6
+Lookup: len is 4 name is bb-2, passed name is bb-6
+Lookup: len is 4 name is bb-3, passed name is bb-6
+Lookup: len is 4 name is bb-4, passed name is bb-6
+Lookup: len is 4 name is bb-5, passed name is bb-6
+Lookup: len is 4 name is bb-6, passed name is bb-6
+Lookup success: name bb-6 inum 19
+isfile: 19 is a file
+getfile 0000000000000013
+getfile 0000000000000013 -> sz 4
+   unique: 283, success, outsize: 144
+unique: 284, opcode: OPEN (14), nodeid: 19, insize: 48, pid: 247
+   unique: 284, success, outsize: 32
+unique: 285, opcode: READ (15), nodeid: 19, insize: 80, pid: 247
+   unique: 285, success, outsize: 20
+unique: 286, opcode: RELEASE (18), nodeid: 19, insize: 64, pid: 0
+   unique: 286, success, outsize: 16
+unique: 287, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 287, success, outsize: 144
+unique: 288, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-7
+Lookup: len is 4 name is aa-1, passed name is bb-7
+Lookup: len is 4 name is aa-2, passed name is bb-7
+Lookup: len is 4 name is aa-3, passed name is bb-7
+Lookup: len is 4 name is aa-4, passed name is bb-7
+Lookup: len is 4 name is aa-5, passed name is bb-7
+Lookup: len is 4 name is aa-6, passed name is bb-7
+Lookup: len is 4 name is aa-7, passed name is bb-7
+Lookup: len is 4 name is aa-8, passed name is bb-7
+Lookup: len is 4 name is aa-9, passed name is bb-7
+Lookup: len is 4 name is bb-0, passed name is bb-7
+Lookup: len is 4 name is bb-1, passed name is bb-7
+Lookup: len is 4 name is bb-2, passed name is bb-7
+Lookup: len is 4 name is bb-3, passed name is bb-7
+Lookup: len is 4 name is bb-4, passed name is bb-7
+Lookup: len is 4 name is bb-5, passed name is bb-7
+Lookup: len is 4 name is bb-6, passed name is bb-7
+Lookup: len is 4 name is bb-7, passed name is bb-7
+Lookup success: name bb-7 inum 20
+isfile: 20 is a file
+getfile 0000000000000014
+getfile 0000000000000014 -> sz 4
+   unique: 288, success, outsize: 144
+unique: 289, opcode: OPEN (14), nodeid: 20, insize: 48, pid: 247
+   unique: 289, success, outsize: 32
+unique: 290, opcode: READ (15), nodeid: 20, insize: 80, pid: 247
+   unique: 290, success, outsize: 20
+unique: 291, opcode: RELEASE (18), nodeid: 20, insize: 64, pid: 0
+   unique: 291, success, outsize: 16
+unique: 292, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 292, success, outsize: 144
+unique: 293, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-8
+Lookup: len is 4 name is aa-1, passed name is bb-8
+Lookup: len is 4 name is aa-2, passed name is bb-8
+Lookup: len is 4 name is aa-3, passed name is bb-8
+Lookup: len is 4 name is aa-4, passed name is bb-8
+Lookup: len is 4 name is aa-5, passed name is bb-8
+Lookup: len is 4 name is aa-6, passed name is bb-8
+Lookup: len is 4 name is aa-7, passed name is bb-8
+Lookup: len is 4 name is aa-8, passed name is bb-8
+Lookup: len is 4 name is aa-9, passed name is bb-8
+Lookup: len is 4 name is bb-0, passed name is bb-8
+Lookup: len is 4 name is bb-1, passed name is bb-8
+Lookup: len is 4 name is bb-2, passed name is bb-8
+Lookup: len is 4 name is bb-3, passed name is bb-8
+Lookup: len is 4 name is bb-4, passed name is bb-8
+Lookup: len is 4 name is bb-5, passed name is bb-8
+Lookup: len is 4 name is bb-6, passed name is bb-8
+Lookup: len is 4 name is bb-7, passed name is bb-8
+Lookup: len is 4 name is bb-8, passed name is bb-8
+Lookup success: name bb-8 inum 21
+isfile: 21 is a file
+getfile 0000000000000015
+getfile 0000000000000015 -> sz 4
+   unique: 293, success, outsize: 144
+unique: 294, opcode: OPEN (14), nodeid: 21, insize: 48, pid: 247
+   unique: 294, success, outsize: 32
+unique: 295, opcode: READ (15), nodeid: 21, insize: 80, pid: 247
+   unique: 295, success, outsize: 20
+unique: 296, opcode: RELEASE (18), nodeid: 21, insize: 64, pid: 0
+   unique: 296, success, outsize: 16
+unique: 297, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 297, success, outsize: 144
+unique: 298, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-9
+Lookup: len is 4 name is aa-1, passed name is bb-9
+Lookup: len is 4 name is aa-2, passed name is bb-9
+Lookup: len is 4 name is aa-3, passed name is bb-9
+Lookup: len is 4 name is aa-4, passed name is bb-9
+Lookup: len is 4 name is aa-5, passed name is bb-9
+Lookup: len is 4 name is aa-6, passed name is bb-9
+Lookup: len is 4 name is aa-7, passed name is bb-9
+Lookup: len is 4 name is aa-8, passed name is bb-9
+Lookup: len is 4 name is aa-9, passed name is bb-9
+Lookup: len is 4 name is bb-0, passed name is bb-9
+Lookup: len is 4 name is bb-1, passed name is bb-9
+Lookup: len is 4 name is bb-2, passed name is bb-9
+Lookup: len is 4 name is bb-3, passed name is bb-9
+Lookup: len is 4 name is bb-4, passed name is bb-9
+Lookup: len is 4 name is bb-5, passed name is bb-9
+Lookup: len is 4 name is bb-6, passed name is bb-9
+Lookup: len is 4 name is bb-7, passed name is bb-9
+Lookup: len is 4 name is bb-8, passed name is bb-9
+Lookup: len is 4 name is bb-9, passed name is bb-9
+Lookup success: name bb-9 inum 22
+isfile: 22 is a file
+getfile 0000000000000016
+getfile 0000000000000016 -> sz 4
+   unique: 298, success, outsize: 144
+unique: 299, opcode: OPEN (14), nodeid: 22, insize: 48, pid: 247
+   unique: 299, success, outsize: 32
+unique: 300, opcode: READ (15), nodeid: 22, insize: 80, pid: 247
+   unique: 300, success, outsize: 20
+unique: 301, opcode: RELEASE (18), nodeid: 22, insize: 64, pid: 0
+   unique: 301, success, outsize: 16
+unique: 302, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758319 1510758319 1510758319
+   unique: 302, success, outsize: 144
+unique: 303, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-0
+Lookup success: name aa-0 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 4
+   unique: 303, success, outsize: 144
+unique: 304, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-0
+isdir: 2 is a dir
+isdir: 3 is not a dir
+unlink file aa-0
+originial buf
+ 400
+after buf
+ 380
+   unique: 304, success, outsize: 16
+unique: 305, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 305, success, outsize: 144
+unique: 306, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-1, passed name is aa-1
+Lookup success: name aa-1 inum 4
+isfile: 4 is a file
+getfile 0000000000000004
+getfile 0000000000000004 -> sz 4
+   unique: 306, success, outsize: 144
+unique: 307, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-1
+isdir: 2 is a dir
+isdir: 4 is not a dir
+unlink file aa-1
+originial buf
+ 380
+after buf
+ 360
+   unique: 307, success, outsize: 16
+unique: 308, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 308, success, outsize: 144
+unique: 309, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-2, passed name is aa-2
+Lookup success: name aa-2 inum 5
+isfile: 5 is a file
+getfile 0000000000000005
+getfile 0000000000000005 -> sz 4
+   unique: 309, success, outsize: 144
+unique: 310, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-2
+isdir: 2 is a dir
+isdir: 5 is not a dir
+unlink file aa-2
+originial buf
+ 360
+after buf
+ 340
+   unique: 310, success, outsize: 16
+unique: 311, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 311, success, outsize: 144
+unique: 312, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-3, passed name is aa-3
+Lookup success: name aa-3 inum 6
+isfile: 6 is a file
+getfile 0000000000000006
+getfile 0000000000000006 -> sz 4
+   unique: 312, success, outsize: 144
+unique: 314, opcode: BATCH_FORGET (42), nodeid: 0, insize: 96, pid: 0
+unique: 313, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-3
+isdir: 2 is a dir
+isdir: 6 is not a dir
+unlink file aa-3
+originial buf
+ 340
+after buf
+ 320
+   unique: 313, success, outsize: 16
+unique: 316, opcode: FORGET (2), nodeid: 6, insize: 48, pid: 0
+unique: 315, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 315, success, outsize: 144
+unique: 317, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-4, passed name is aa-4
+Lookup success: name aa-4 inum 7
+isfile: 7 is a file
+getfile 0000000000000007
+getfile 0000000000000007 -> sz 4
+   unique: 317, success, outsize: 144
+unique: 318, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-4
+isdir: 2 is a dir
+isdir: 7 is not a dir
+unlink file aa-4
+originial buf
+ 320
+after buf
+ 300
+   unique: 318, success, outsize: 16
+unique: 320, opcode: FORGET (2), nodeid: 7, insize: 48, pid: 0
+unique: 319, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 319, success, outsize: 144
+unique: 321, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-5, passed name is aa-5
+Lookup success: name aa-5 inum 8
+isfile: 8 is a file
+getfile 0000000000000008
+getfile 0000000000000008 -> sz 4
+   unique: 321, success, outsize: 144
+unique: 322, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-5
+isdir: 2 is a dir
+isdir: 8 is not a dir
+unlink file aa-5
+originial buf
+ 300
+after buf
+ 280
+   unique: 322, success, outsize: 16
+unique: 324, opcode: FORGET (2), nodeid: 8, insize: 48, pid: 0
+unique: 323, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 323, success, outsize: 144
+unique: 325, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-6, passed name is aa-6
+Lookup success: name aa-6 inum 9
+isfile: 9 is a file
+getfile 0000000000000009
+getfile 0000000000000009 -> sz 4
+   unique: 325, success, outsize: 144
+unique: 326, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-6
+isdir: 2 is a dir
+isdir: 9 is not a dir
+unlink file aa-6
+originial buf
+ 280
+after buf
+ 260
+   unique: 326, success, outsize: 16
+unique: 328, opcode: FORGET (2), nodeid: 9, insize: 48, pid: 0
+unique: 327, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 327, success, outsize: 144
+unique: 329, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-7, passed name is aa-7
+Lookup success: name aa-7 inum 10
+isfile: 10 is a file
+getfile 000000000000000a
+getfile 000000000000000a -> sz 4
+   unique: 329, success, outsize: 144
+unique: 330, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-7
+isdir: 2 is a dir
+isdir: 10 is not a dir
+unlink file aa-7
+originial buf
+ 260
+after buf
+ 240
+   unique: 330, success, outsize: 16
+unique: 332, opcode: FORGET (2), nodeid: 10, insize: 48, pid: 0
+unique: 331, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 331, success, outsize: 144
+unique: 333, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-8, passed name is aa-8
+Lookup success: name aa-8 inum 11
+isfile: 11 is a file
+getfile 000000000000000b
+getfile 000000000000000b -> sz 4
+   unique: 333, success, outsize: 144
+unique: 334, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-8
+isdir: 2 is a dir
+isdir: 11 is not a dir
+unlink file aa-8
+originial buf
+ 240
+after buf
+ 220
+   unique: 334, success, outsize: 16
+unique: 336, opcode: FORGET (2), nodeid: 11, insize: 48, pid: 0
+unique: 335, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 335, success, outsize: 144
+unique: 337, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-9, passed name is aa-9
+Lookup success: name aa-9 inum 12
+isfile: 12 is a file
+getfile 000000000000000c
+getfile 000000000000000c -> sz 4
+   unique: 337, success, outsize: 144
+unique: 338, opcode: UNLINK (10), nodeid: 2, insize: 45, pid: 247
+yfs:unlink aa-9
+isdir: 2 is a dir
+isdir: 12 is not a dir
+unlink file aa-9
+originial buf
+ 220
+after buf
+ 200
+   unique: 338, success, outsize: 16
+unique: 339, opcode: FORGET (2), nodeid: 12, insize: 48, pid: 0
+unique: 340, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758320 1510758320 1510758320
+   unique: 340, success, outsize: 144
+unique: 341, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name bf
+isdir: 2 is a dir
+Lookup: len is 4 name is bb-0, passed name is bf
+Lookup: len is 4 name is bb-1, passed name is bf
+Lookup: len is 4 name is bb-2, passed name is bf
+Lookup: len is 4 name is bb-3, passed name is bf
+Lookup: len is 4 name is bb-4, passed name is bf
+Lookup: len is 4 name is bb-5, passed name is bf
+Lookup: len is 4 name is bb-6, passed name is bf
+Lookup: len is 4 name is bb-7, passed name is bf
+Lookup: len is 4 name is bb-8, passed name is bf
+Lookup: len is 4 name is bb-9, passed name is bf
+   unique: 341, error: -2 (No such file or directory), outsize: 16
+unique: 342, opcode: CREATE (35), nodeid: 2, insize: 59, pid: 247
+create lookup
+yfs:lookup file name bf
+isdir: 2 is a dir
+Lookup: len is 4 name is bb-0, passed name is bf
+Lookup: len is 4 name is bb-1, passed name is bf
+Lookup: len is 4 name is bb-2, passed name is bf
+Lookup: len is 4 name is bb-3, passed name is bf
+Lookup: len is 4 name is bb-4, passed name is bf
+Lookup: len is 4 name is bb-5, passed name is bf
+Lookup: len is 4 name is bb-6, passed name is bf
+Lookup: len is 4 name is bb-7, passed name is bf
+Lookup: len is 4 name is bb-8, passed name is bf
+Lookup: len is 4 name is bb-9, passed name is bf
+ec create
+yfs:create file name bf inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 0
+   unique: 342, success, outsize: 160
+OK: create returns.
+unique: 343, opcode: WRITE (16), nodeid: 3, insize: 4176, pid: 247
+yfs:write inum 3
+   unique: 343, success, outsize: 24
+unique: 344, opcode: WRITE (16), nodeid: 3, insize: 4176, pid: 247
+yfs:write inum 3
+   unique: 344, success, outsize: 24
+unique: 345, opcode: WRITE (16), nodeid: 3, insize: 4176, pid: 247
+yfs:write inum 3
+   unique: 345, success, outsize: 24
+unique: 346, opcode: WRITE (16), nodeid: 3, insize: 4176, pid: 247
+yfs:write inum 3
+   unique: 346, success, outsize: 24
+unique: 347, opcode: WRITE (16), nodeid: 3, insize: 3696, pid: 247
+yfs:write inum 3
+   unique: 347, success, outsize: 24
+unique: 348, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 348, success, outsize: 16
+commit a new version
+ec commit
+unique: 349, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758321 1510758321 1510758321
+   unique: 349, success, outsize: 144
+unique: 350, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name bf
+isdir: 2 is a dir
+Lookup: len is 4 name is bb-0, passed name is bf
+Lookup: len is 4 name is bb-1, passed name is bf
+Lookup: len is 4 name is bb-2, passed name is bf
+Lookup: len is 4 name is bb-3, passed name is bf
+Lookup: len is 4 name is bb-4, passed name is bf
+Lookup: len is 4 name is bb-5, passed name is bf
+Lookup: len is 4 name is bb-6, passed name is bf
+Lookup: len is 4 name is bb-7, passed name is bf
+Lookup: len is 4 name is bb-8, passed name is bf
+Lookup: len is 4 name is bb-9, passed name is bf
+Lookup: len is 2 name is bf, passed name is bf
+Lookup success: name bf inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 20000
+   unique: 350, success, outsize: 144
+unique: 351, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 351, success, outsize: 32
+unique: 352, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 20000
+   unique: 352, success, outsize: 120
+unique: 353, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 353, success, outsize: 20016
+unique: 354, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 354, success, outsize: 16
+unique: 355, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758321 1510758321 1510758321
+   unique: 355, success, outsize: 144
+unique: 356, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name bf
+isdir: 2 is a dir
+Lookup: len is 4 name is bb-0, passed name is bf
+Lookup: len is 4 name is bb-1, passed name is bf
+Lookup: len is 4 name is bb-2, passed name is bf
+Lookup: len is 4 name is bb-3, passed name is bf
+Lookup: len is 4 name is bb-4, passed name is bf
+Lookup: len is 4 name is bb-5, passed name is bf
+Lookup: len is 4 name is bb-6, passed name is bf
+Lookup: len is 4 name is bb-7, passed name is bf
+Lookup: len is 4 name is bb-8, passed name is bf
+Lookup: len is 4 name is bb-9, passed name is bf
+Lookup: len is 2 name is bf, passed name is bf
+Lookup success: name bf inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 20000
+   unique: 356, success, outsize: 144
+unique: 357, opcode: UNLINK (10), nodeid: 2, insize: 43, pid: 247
+yfs:unlink bf
+isdir: 2 is a dir
+isdir: 3 is not a dir
+unlink file bf
+originial buf
+ 218
+after buf
+ 200
+   unique: 357, success, outsize: 16
+unique: 358, opcode: FORGET (2), nodeid: 3, insize: 48, pid: 0
+to previous version
+yfs undo
+ec undo
+unique: 359, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758322 1510758322 1510758322
+   unique: 359, success, outsize: 144
+unique: 360, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name bf
+isdir: 2 is a dir
+Lookup: len is 4 name is bb-0, passed name is bf
+Lookup: len is 4 name is bb-1, passed name is bf
+Lookup: len is 4 name is bb-2, passed name is bf
+Lookup: len is 4 name is bb-3, passed name is bf
+Lookup: len is 4 name is bb-4, passed name is bf
+Lookup: len is 4 name is bb-5, passed name is bf
+Lookup: len is 4 name is bb-6, passed name is bf
+Lookup: len is 4 name is bb-7, passed name is bf
+Lookup: len is 4 name is bb-8, passed name is bf
+Lookup: len is 4 name is bb-9, passed name is bf
+Lookup: len is 2 name is bf, passed name is bf
+Lookup success: name bf inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 20000
+   unique: 360, success, outsize: 144
+unique: 361, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 361, success, outsize: 32
+unique: 362, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 20000
+   unique: 362, success, outsize: 120
+unique: 363, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 363, success, outsize: 20016
+unique: 364, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 364, success, outsize: 16
+to previous version
+yfs undo
+ec undo
+unique: 365, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758322 1510758323 1510758323
+   unique: 365, success, outsize: 144
+unique: 366, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 366, success, outsize: 32
+unique: 367, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758322 1510758323 1510758323
+   unique: 367, success, outsize: 120
+unique: 368, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name aa-0, file inum 3
+readdir dir 2, file name aa-1, file inum 4
+readdir dir 2, file name aa-2, file inum 5
+readdir dir 2, file name aa-3, file inum 6
+readdir dir 2, file name aa-4, file inum 7
+readdir dir 2, file name aa-5, file inum 8
+readdir dir 2, file name aa-6, file inum 9
+readdir dir 2, file name aa-7, file inum 10
+readdir dir 2, file name aa-8, file inum 11
+readdir dir 2, file name aa-9, file inum 12
+readdir dir 2, file name bb-0, file inum 13
+readdir dir 2, file name bb-1, file inum 14
+readdir dir 2, file name bb-2, file inum 15
+readdir dir 2, file name bb-3, file inum 16
+readdir dir 2, file name bb-4, file inum 17
+readdir dir 2, file name bb-5, file inum 18
+readdir dir 2, file name bb-6, file inum 19
+readdir dir 2, file name bb-7, file inum 20
+readdir dir 2, file name bb-8, file inum 21
+readdir dir 2, file name bb-9, file inum 22
+   unique: 368, success, outsize: 656
+unique: 369, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name aa-0, file inum 3
+readdir dir 2, file name aa-1, file inum 4
+readdir dir 2, file name aa-2, file inum 5
+readdir dir 2, file name aa-3, file inum 6
+readdir dir 2, file name aa-4, file inum 7
+readdir dir 2, file name aa-5, file inum 8
+readdir dir 2, file name aa-6, file inum 9
+readdir dir 2, file name aa-7, file inum 10
+readdir dir 2, file name aa-8, file inum 11
+readdir dir 2, file name aa-9, file inum 12
+readdir dir 2, file name bb-0, file inum 13
+readdir dir 2, file name bb-1, file inum 14
+readdir dir 2, file name bb-2, file inum 15
+readdir dir 2, file name bb-3, file inum 16
+readdir dir 2, file name bb-4, file inum 17
+readdir dir 2, file name bb-5, file inum 18
+readdir dir 2, file name bb-6, file inum 19
+readdir dir 2, file name bb-7, file inum 20
+readdir dir 2, file name bb-8, file inum 21
+readdir dir 2, file name bb-9, file inum 22
+   unique: 369, success, outsize: 16
+unique: 370, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 370, success, outsize: 16
+unique: 371, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 371, success, outsize: 144
+unique: 372, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-0
+Lookup success: name aa-0 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 4
+   unique: 372, success, outsize: 144
+unique: 373, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 373, success, outsize: 32
+unique: 374, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 374, success, outsize: 20
+unique: 375, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 375, success, outsize: 16
+unique: 376, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 376, success, outsize: 144
+unique: 377, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-1
+Lookup: len is 4 name is aa-1, passed name is aa-1
+Lookup success: name aa-1 inum 4
+isfile: 4 is a file
+getfile 0000000000000004
+getfile 0000000000000004 -> sz 4
+   unique: 377, success, outsize: 144
+unique: 378, opcode: OPEN (14), nodeid: 4, insize: 48, pid: 247
+   unique: 378, success, outsize: 32
+unique: 379, opcode: READ (15), nodeid: 4, insize: 80, pid: 247
+   unique: 379, success, outsize: 20
+unique: 380, opcode: RELEASE (18), nodeid: 4, insize: 64, pid: 0
+   unique: 380, success, outsize: 16
+unique: 381, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 381, success, outsize: 144
+unique: 382, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-2
+Lookup: len is 4 name is aa-1, passed name is aa-2
+Lookup: len is 4 name is aa-2, passed name is aa-2
+Lookup success: name aa-2 inum 5
+isfile: 5 is a file
+getfile 0000000000000005
+getfile 0000000000000005 -> sz 4
+   unique: 382, success, outsize: 144
+unique: 383, opcode: OPEN (14), nodeid: 5, insize: 48, pid: 247
+   unique: 383, success, outsize: 32
+unique: 384, opcode: READ (15), nodeid: 5, insize: 80, pid: 247
+   unique: 384, success, outsize: 20
+unique: 385, opcode: RELEASE (18), nodeid: 5, insize: 64, pid: 0
+   unique: 385, success, outsize: 16
+unique: 386, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 386, success, outsize: 144
+unique: 387, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-3
+Lookup: len is 4 name is aa-1, passed name is aa-3
+Lookup: len is 4 name is aa-2, passed name is aa-3
+Lookup: len is 4 name is aa-3, passed name is aa-3
+Lookup success: name aa-3 inum 6
+isfile: 6 is a file
+getfile 0000000000000006
+getfile 0000000000000006 -> sz 4
+   unique: 387, success, outsize: 144
+unique: 388, opcode: OPEN (14), nodeid: 6, insize: 48, pid: 247
+   unique: 388, success, outsize: 32
+unique: 389, opcode: READ (15), nodeid: 6, insize: 80, pid: 247
+   unique: 389, success, outsize: 20
+unique: 390, opcode: RELEASE (18), nodeid: 6, insize: 64, pid: 0
+   unique: 390, success, outsize: 16
+unique: 391, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 391, success, outsize: 144
+unique: 392, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-4
+Lookup: len is 4 name is aa-1, passed name is aa-4
+Lookup: len is 4 name is aa-2, passed name is aa-4
+Lookup: len is 4 name is aa-3, passed name is aa-4
+Lookup: len is 4 name is aa-4, passed name is aa-4
+Lookup success: name aa-4 inum 7
+isfile: 7 is a file
+getfile 0000000000000007
+getfile 0000000000000007 -> sz 4
+   unique: 392, success, outsize: 144
+unique: 393, opcode: OPEN (14), nodeid: 7, insize: 48, pid: 247
+   unique: 393, success, outsize: 32
+unique: 394, opcode: READ (15), nodeid: 7, insize: 80, pid: 247
+   unique: 394, success, outsize: 20
+unique: 395, opcode: RELEASE (18), nodeid: 7, insize: 64, pid: 0
+   unique: 395, success, outsize: 16
+unique: 396, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 396, success, outsize: 144
+unique: 397, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-5
+Lookup: len is 4 name is aa-1, passed name is aa-5
+Lookup: len is 4 name is aa-2, passed name is aa-5
+Lookup: len is 4 name is aa-3, passed name is aa-5
+Lookup: len is 4 name is aa-4, passed name is aa-5
+Lookup: len is 4 name is aa-5, passed name is aa-5
+Lookup success: name aa-5 inum 8
+isfile: 8 is a file
+getfile 0000000000000008
+getfile 0000000000000008 -> sz 4
+   unique: 397, success, outsize: 144
+unique: 398, opcode: OPEN (14), nodeid: 8, insize: 48, pid: 247
+   unique: 398, success, outsize: 32
+unique: 399, opcode: READ (15), nodeid: 8, insize: 80, pid: 247
+   unique: 399, success, outsize: 20
+unique: 400, opcode: RELEASE (18), nodeid: 8, insize: 64, pid: 0
+   unique: 400, success, outsize: 16
+unique: 401, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 401, success, outsize: 144
+unique: 402, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-6
+Lookup: len is 4 name is aa-1, passed name is aa-6
+Lookup: len is 4 name is aa-2, passed name is aa-6
+Lookup: len is 4 name is aa-3, passed name is aa-6
+Lookup: len is 4 name is aa-4, passed name is aa-6
+Lookup: len is 4 name is aa-5, passed name is aa-6
+Lookup: len is 4 name is aa-6, passed name is aa-6
+Lookup success: name aa-6 inum 9
+isfile: 9 is a file
+getfile 0000000000000009
+getfile 0000000000000009 -> sz 4
+   unique: 402, success, outsize: 144
+unique: 403, opcode: OPEN (14), nodeid: 9, insize: 48, pid: 247
+   unique: 403, success, outsize: 32
+unique: 404, opcode: READ (15), nodeid: 9, insize: 80, pid: 247
+   unique: 404, success, outsize: 20
+unique: 405, opcode: RELEASE (18), nodeid: 9, insize: 64, pid: 0
+   unique: 405, success, outsize: 16
+unique: 406, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 406, success, outsize: 144
+unique: 407, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-7
+Lookup: len is 4 name is aa-1, passed name is aa-7
+Lookup: len is 4 name is aa-2, passed name is aa-7
+Lookup: len is 4 name is aa-3, passed name is aa-7
+Lookup: len is 4 name is aa-4, passed name is aa-7
+Lookup: len is 4 name is aa-5, passed name is aa-7
+Lookup: len is 4 name is aa-6, passed name is aa-7
+Lookup: len is 4 name is aa-7, passed name is aa-7
+Lookup success: name aa-7 inum 10
+isfile: 10 is a file
+getfile 000000000000000a
+getfile 000000000000000a -> sz 4
+   unique: 407, success, outsize: 144
+unique: 408, opcode: OPEN (14), nodeid: 10, insize: 48, pid: 247
+   unique: 408, success, outsize: 32
+unique: 409, opcode: READ (15), nodeid: 10, insize: 80, pid: 247
+   unique: 409, success, outsize: 20
+unique: 410, opcode: RELEASE (18), nodeid: 10, insize: 64, pid: 0
+   unique: 410, success, outsize: 16
+unique: 411, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 411, success, outsize: 144
+unique: 412, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-8
+Lookup: len is 4 name is aa-1, passed name is aa-8
+Lookup: len is 4 name is aa-2, passed name is aa-8
+Lookup: len is 4 name is aa-3, passed name is aa-8
+Lookup: len is 4 name is aa-4, passed name is aa-8
+Lookup: len is 4 name is aa-5, passed name is aa-8
+Lookup: len is 4 name is aa-6, passed name is aa-8
+Lookup: len is 4 name is aa-7, passed name is aa-8
+Lookup: len is 4 name is aa-8, passed name is aa-8
+Lookup success: name aa-8 inum 11
+isfile: 11 is a file
+getfile 000000000000000b
+getfile 000000000000000b -> sz 4
+   unique: 412, success, outsize: 144
+unique: 413, opcode: OPEN (14), nodeid: 11, insize: 48, pid: 247
+   unique: 413, success, outsize: 32
+unique: 414, opcode: READ (15), nodeid: 11, insize: 80, pid: 247
+   unique: 414, success, outsize: 20
+unique: 415, opcode: RELEASE (18), nodeid: 11, insize: 64, pid: 0
+   unique: 415, success, outsize: 16
+unique: 416, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 416, success, outsize: 144
+unique: 417, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-9
+Lookup: len is 4 name is aa-1, passed name is aa-9
+Lookup: len is 4 name is aa-2, passed name is aa-9
+Lookup: len is 4 name is aa-3, passed name is aa-9
+Lookup: len is 4 name is aa-4, passed name is aa-9
+Lookup: len is 4 name is aa-5, passed name is aa-9
+Lookup: len is 4 name is aa-6, passed name is aa-9
+Lookup: len is 4 name is aa-7, passed name is aa-9
+Lookup: len is 4 name is aa-8, passed name is aa-9
+Lookup: len is 4 name is aa-9, passed name is aa-9
+Lookup success: name aa-9 inum 12
+isfile: 12 is a file
+getfile 000000000000000c
+getfile 000000000000000c -> sz 4
+   unique: 417, success, outsize: 144
+unique: 418, opcode: OPEN (14), nodeid: 12, insize: 48, pid: 247
+   unique: 418, success, outsize: 32
+unique: 419, opcode: READ (15), nodeid: 12, insize: 80, pid: 247
+   unique: 419, success, outsize: 20
+unique: 420, opcode: RELEASE (18), nodeid: 12, insize: 64, pid: 0
+   unique: 420, success, outsize: 16
+unique: 421, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 421, success, outsize: 144
+unique: 422, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-0
+Lookup: len is 4 name is aa-1, passed name is bb-0
+Lookup: len is 4 name is aa-2, passed name is bb-0
+Lookup: len is 4 name is aa-3, passed name is bb-0
+Lookup: len is 4 name is aa-4, passed name is bb-0
+Lookup: len is 4 name is aa-5, passed name is bb-0
+Lookup: len is 4 name is aa-6, passed name is bb-0
+Lookup: len is 4 name is aa-7, passed name is bb-0
+Lookup: len is 4 name is aa-8, passed name is bb-0
+Lookup: len is 4 name is aa-9, passed name is bb-0
+Lookup: len is 4 name is bb-0, passed name is bb-0
+Lookup success: name bb-0 inum 13
+isfile: 13 is a file
+getfile 000000000000000d
+getfile 000000000000000d -> sz 4
+   unique: 422, success, outsize: 144
+unique: 423, opcode: OPEN (14), nodeid: 13, insize: 48, pid: 247
+   unique: 423, success, outsize: 32
+unique: 424, opcode: READ (15), nodeid: 13, insize: 80, pid: 247
+   unique: 424, success, outsize: 20
+unique: 425, opcode: RELEASE (18), nodeid: 13, insize: 64, pid: 0
+   unique: 425, success, outsize: 16
+unique: 426, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 426, success, outsize: 144
+unique: 427, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-1
+Lookup: len is 4 name is aa-1, passed name is bb-1
+Lookup: len is 4 name is aa-2, passed name is bb-1
+Lookup: len is 4 name is aa-3, passed name is bb-1
+Lookup: len is 4 name is aa-4, passed name is bb-1
+Lookup: len is 4 name is aa-5, passed name is bb-1
+Lookup: len is 4 name is aa-6, passed name is bb-1
+Lookup: len is 4 name is aa-7, passed name is bb-1
+Lookup: len is 4 name is aa-8, passed name is bb-1
+Lookup: len is 4 name is aa-9, passed name is bb-1
+Lookup: len is 4 name is bb-0, passed name is bb-1
+Lookup: len is 4 name is bb-1, passed name is bb-1
+Lookup success: name bb-1 inum 14
+isfile: 14 is a file
+getfile 000000000000000e
+getfile 000000000000000e -> sz 4
+   unique: 427, success, outsize: 144
+unique: 428, opcode: OPEN (14), nodeid: 14, insize: 48, pid: 247
+   unique: 428, success, outsize: 32
+unique: 429, opcode: READ (15), nodeid: 14, insize: 80, pid: 247
+   unique: 429, success, outsize: 20
+unique: 430, opcode: RELEASE (18), nodeid: 14, insize: 64, pid: 0
+   unique: 430, success, outsize: 16
+unique: 431, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 431, success, outsize: 144
+unique: 432, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-2
+Lookup: len is 4 name is aa-1, passed name is bb-2
+Lookup: len is 4 name is aa-2, passed name is bb-2
+Lookup: len is 4 name is aa-3, passed name is bb-2
+Lookup: len is 4 name is aa-4, passed name is bb-2
+Lookup: len is 4 name is aa-5, passed name is bb-2
+Lookup: len is 4 name is aa-6, passed name is bb-2
+Lookup: len is 4 name is aa-7, passed name is bb-2
+Lookup: len is 4 name is aa-8, passed name is bb-2
+Lookup: len is 4 name is aa-9, passed name is bb-2
+Lookup: len is 4 name is bb-0, passed name is bb-2
+Lookup: len is 4 name is bb-1, passed name is bb-2
+Lookup: len is 4 name is bb-2, passed name is bb-2
+Lookup success: name bb-2 inum 15
+isfile: 15 is a file
+getfile 000000000000000f
+getfile 000000000000000f -> sz 4
+   unique: 432, success, outsize: 144
+unique: 433, opcode: OPEN (14), nodeid: 15, insize: 48, pid: 247
+   unique: 433, success, outsize: 32
+unique: 434, opcode: READ (15), nodeid: 15, insize: 80, pid: 247
+   unique: 434, success, outsize: 20
+unique: 435, opcode: RELEASE (18), nodeid: 15, insize: 64, pid: 0
+   unique: 435, success, outsize: 16
+unique: 436, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 436, success, outsize: 144
+unique: 437, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-3
+Lookup: len is 4 name is aa-1, passed name is bb-3
+Lookup: len is 4 name is aa-2, passed name is bb-3
+Lookup: len is 4 name is aa-3, passed name is bb-3
+Lookup: len is 4 name is aa-4, passed name is bb-3
+Lookup: len is 4 name is aa-5, passed name is bb-3
+Lookup: len is 4 name is aa-6, passed name is bb-3
+Lookup: len is 4 name is aa-7, passed name is bb-3
+Lookup: len is 4 name is aa-8, passed name is bb-3
+Lookup: len is 4 name is aa-9, passed name is bb-3
+Lookup: len is 4 name is bb-0, passed name is bb-3
+Lookup: len is 4 name is bb-1, passed name is bb-3
+Lookup: len is 4 name is bb-2, passed name is bb-3
+Lookup: len is 4 name is bb-3, passed name is bb-3
+Lookup success: name bb-3 inum 16
+isfile: 16 is a file
+getfile 0000000000000010
+getfile 0000000000000010 -> sz 4
+   unique: 437, success, outsize: 144
+unique: 438, opcode: OPEN (14), nodeid: 16, insize: 48, pid: 247
+   unique: 438, success, outsize: 32
+unique: 439, opcode: READ (15), nodeid: 16, insize: 80, pid: 247
+   unique: 439, success, outsize: 20
+unique: 440, opcode: RELEASE (18), nodeid: 16, insize: 64, pid: 0
+   unique: 440, success, outsize: 16
+unique: 441, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 441, success, outsize: 144
+unique: 442, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-4
+Lookup: len is 4 name is aa-1, passed name is bb-4
+Lookup: len is 4 name is aa-2, passed name is bb-4
+Lookup: len is 4 name is aa-3, passed name is bb-4
+Lookup: len is 4 name is aa-4, passed name is bb-4
+Lookup: len is 4 name is aa-5, passed name is bb-4
+Lookup: len is 4 name is aa-6, passed name is bb-4
+Lookup: len is 4 name is aa-7, passed name is bb-4
+Lookup: len is 4 name is aa-8, passed name is bb-4
+Lookup: len is 4 name is aa-9, passed name is bb-4
+Lookup: len is 4 name is bb-0, passed name is bb-4
+Lookup: len is 4 name is bb-1, passed name is bb-4
+Lookup: len is 4 name is bb-2, passed name is bb-4
+Lookup: len is 4 name is bb-3, passed name is bb-4
+Lookup: len is 4 name is bb-4, passed name is bb-4
+Lookup success: name bb-4 inum 17
+isfile: 17 is a file
+getfile 0000000000000011
+getfile 0000000000000011 -> sz 4
+   unique: 442, success, outsize: 144
+unique: 443, opcode: OPEN (14), nodeid: 17, insize: 48, pid: 247
+   unique: 443, success, outsize: 32
+unique: 444, opcode: READ (15), nodeid: 17, insize: 80, pid: 247
+   unique: 444, success, outsize: 20
+unique: 445, opcode: RELEASE (18), nodeid: 17, insize: 64, pid: 0
+   unique: 445, success, outsize: 16
+unique: 446, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 446, success, outsize: 144
+unique: 447, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-5
+Lookup: len is 4 name is aa-1, passed name is bb-5
+Lookup: len is 4 name is aa-2, passed name is bb-5
+Lookup: len is 4 name is aa-3, passed name is bb-5
+Lookup: len is 4 name is aa-4, passed name is bb-5
+Lookup: len is 4 name is aa-5, passed name is bb-5
+Lookup: len is 4 name is aa-6, passed name is bb-5
+Lookup: len is 4 name is aa-7, passed name is bb-5
+Lookup: len is 4 name is aa-8, passed name is bb-5
+Lookup: len is 4 name is aa-9, passed name is bb-5
+Lookup: len is 4 name is bb-0, passed name is bb-5
+Lookup: len is 4 name is bb-1, passed name is bb-5
+Lookup: len is 4 name is bb-2, passed name is bb-5
+Lookup: len is 4 name is bb-3, passed name is bb-5
+Lookup: len is 4 name is bb-4, passed name is bb-5
+Lookup: len is 4 name is bb-5, passed name is bb-5
+Lookup success: name bb-5 inum 18
+isfile: 18 is a file
+getfile 0000000000000012
+getfile 0000000000000012 -> sz 4
+   unique: 447, success, outsize: 144
+unique: 448, opcode: OPEN (14), nodeid: 18, insize: 48, pid: 247
+   unique: 448, success, outsize: 32
+unique: 449, opcode: READ (15), nodeid: 18, insize: 80, pid: 247
+   unique: 449, success, outsize: 20
+unique: 450, opcode: RELEASE (18), nodeid: 18, insize: 64, pid: 0
+   unique: 450, success, outsize: 16
+unique: 451, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 451, success, outsize: 144
+unique: 452, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-6
+Lookup: len is 4 name is aa-1, passed name is bb-6
+Lookup: len is 4 name is aa-2, passed name is bb-6
+Lookup: len is 4 name is aa-3, passed name is bb-6
+Lookup: len is 4 name is aa-4, passed name is bb-6
+Lookup: len is 4 name is aa-5, passed name is bb-6
+Lookup: len is 4 name is aa-6, passed name is bb-6
+Lookup: len is 4 name is aa-7, passed name is bb-6
+Lookup: len is 4 name is aa-8, passed name is bb-6
+Lookup: len is 4 name is aa-9, passed name is bb-6
+Lookup: len is 4 name is bb-0, passed name is bb-6
+Lookup: len is 4 name is bb-1, passed name is bb-6
+Lookup: len is 4 name is bb-2, passed name is bb-6
+Lookup: len is 4 name is bb-3, passed name is bb-6
+Lookup: len is 4 name is bb-4, passed name is bb-6
+Lookup: len is 4 name is bb-5, passed name is bb-6
+Lookup: len is 4 name is bb-6, passed name is bb-6
+Lookup success: name bb-6 inum 19
+isfile: 19 is a file
+getfile 0000000000000013
+getfile 0000000000000013 -> sz 4
+   unique: 452, success, outsize: 144
+unique: 453, opcode: OPEN (14), nodeid: 19, insize: 48, pid: 247
+   unique: 453, success, outsize: 32
+unique: 454, opcode: READ (15), nodeid: 19, insize: 80, pid: 247
+   unique: 454, success, outsize: 20
+unique: 455, opcode: RELEASE (18), nodeid: 19, insize: 64, pid: 0
+   unique: 455, success, outsize: 16
+unique: 456, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 456, success, outsize: 144
+unique: 457, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-7
+Lookup: len is 4 name is aa-1, passed name is bb-7
+Lookup: len is 4 name is aa-2, passed name is bb-7
+Lookup: len is 4 name is aa-3, passed name is bb-7
+Lookup: len is 4 name is aa-4, passed name is bb-7
+Lookup: len is 4 name is aa-5, passed name is bb-7
+Lookup: len is 4 name is aa-6, passed name is bb-7
+Lookup: len is 4 name is aa-7, passed name is bb-7
+Lookup: len is 4 name is aa-8, passed name is bb-7
+Lookup: len is 4 name is aa-9, passed name is bb-7
+Lookup: len is 4 name is bb-0, passed name is bb-7
+Lookup: len is 4 name is bb-1, passed name is bb-7
+Lookup: len is 4 name is bb-2, passed name is bb-7
+Lookup: len is 4 name is bb-3, passed name is bb-7
+Lookup: len is 4 name is bb-4, passed name is bb-7
+Lookup: len is 4 name is bb-5, passed name is bb-7
+Lookup: len is 4 name is bb-6, passed name is bb-7
+Lookup: len is 4 name is bb-7, passed name is bb-7
+Lookup success: name bb-7 inum 20
+isfile: 20 is a file
+getfile 0000000000000014
+getfile 0000000000000014 -> sz 4
+   unique: 457, success, outsize: 144
+unique: 458, opcode: OPEN (14), nodeid: 20, insize: 48, pid: 247
+   unique: 458, success, outsize: 32
+unique: 459, opcode: READ (15), nodeid: 20, insize: 80, pid: 247
+   unique: 459, success, outsize: 20
+unique: 460, opcode: RELEASE (18), nodeid: 20, insize: 64, pid: 0
+   unique: 460, success, outsize: 16
+unique: 461, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 461, success, outsize: 144
+unique: 462, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-8
+Lookup: len is 4 name is aa-1, passed name is bb-8
+Lookup: len is 4 name is aa-2, passed name is bb-8
+Lookup: len is 4 name is aa-3, passed name is bb-8
+Lookup: len is 4 name is aa-4, passed name is bb-8
+Lookup: len is 4 name is aa-5, passed name is bb-8
+Lookup: len is 4 name is aa-6, passed name is bb-8
+Lookup: len is 4 name is aa-7, passed name is bb-8
+Lookup: len is 4 name is aa-8, passed name is bb-8
+Lookup: len is 4 name is aa-9, passed name is bb-8
+Lookup: len is 4 name is bb-0, passed name is bb-8
+Lookup: len is 4 name is bb-1, passed name is bb-8
+Lookup: len is 4 name is bb-2, passed name is bb-8
+Lookup: len is 4 name is bb-3, passed name is bb-8
+Lookup: len is 4 name is bb-4, passed name is bb-8
+Lookup: len is 4 name is bb-5, passed name is bb-8
+Lookup: len is 4 name is bb-6, passed name is bb-8
+Lookup: len is 4 name is bb-7, passed name is bb-8
+Lookup: len is 4 name is bb-8, passed name is bb-8
+Lookup success: name bb-8 inum 21
+isfile: 21 is a file
+getfile 0000000000000015
+getfile 0000000000000015 -> sz 4
+   unique: 462, success, outsize: 144
+unique: 463, opcode: OPEN (14), nodeid: 21, insize: 48, pid: 247
+   unique: 463, success, outsize: 32
+unique: 464, opcode: READ (15), nodeid: 21, insize: 80, pid: 247
+   unique: 464, success, outsize: 20
+unique: 465, opcode: RELEASE (18), nodeid: 21, insize: 64, pid: 0
+   unique: 465, success, outsize: 16
+unique: 466, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 466, success, outsize: 144
+unique: 467, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-9
+Lookup: len is 4 name is aa-1, passed name is bb-9
+Lookup: len is 4 name is aa-2, passed name is bb-9
+Lookup: len is 4 name is aa-3, passed name is bb-9
+Lookup: len is 4 name is aa-4, passed name is bb-9
+Lookup: len is 4 name is aa-5, passed name is bb-9
+Lookup: len is 4 name is aa-6, passed name is bb-9
+Lookup: len is 4 name is aa-7, passed name is bb-9
+Lookup: len is 4 name is aa-8, passed name is bb-9
+Lookup: len is 4 name is aa-9, passed name is bb-9
+Lookup: len is 4 name is bb-0, passed name is bb-9
+Lookup: len is 4 name is bb-1, passed name is bb-9
+Lookup: len is 4 name is bb-2, passed name is bb-9
+Lookup: len is 4 name is bb-3, passed name is bb-9
+Lookup: len is 4 name is bb-4, passed name is bb-9
+Lookup: len is 4 name is bb-5, passed name is bb-9
+Lookup: len is 4 name is bb-6, passed name is bb-9
+Lookup: len is 4 name is bb-7, passed name is bb-9
+Lookup: len is 4 name is bb-8, passed name is bb-9
+Lookup: len is 4 name is bb-9, passed name is bb-9
+Lookup success: name bb-9 inum 22
+isfile: 22 is a file
+getfile 0000000000000016
+getfile 0000000000000016 -> sz 4
+   unique: 467, success, outsize: 144
+unique: 468, opcode: OPEN (14), nodeid: 22, insize: 48, pid: 247
+   unique: 468, success, outsize: 32
+unique: 469, opcode: READ (15), nodeid: 22, insize: 80, pid: 247
+   unique: 469, success, outsize: 20
+unique: 470, opcode: RELEASE (18), nodeid: 22, insize: 64, pid: 0
+   unique: 470, success, outsize: 16
+to previous version
+yfs undo
+ec undo
+unique: 471, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 471, success, outsize: 144
+unique: 472, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 472, success, outsize: 32
+unique: 473, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 473, success, outsize: 120
+unique: 474, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+   unique: 474, success, outsize: 16
+unique: 475, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 475, success, outsize: 16
+to previous version
+yfs undo
+ec undo
+unique: 476, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 476, success, outsize: 144
+unique: 477, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 9
+   unique: 477, success, outsize: 144
+unique: 478, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 478, success, outsize: 32
+unique: 479, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 9
+   unique: 479, success, outsize: 120
+unique: 480, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 480, success, outsize: 25
+unique: 481, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 481, success, outsize: 16
+unique: 482, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 482, success, outsize: 144
+unique: 483, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 483, success, outsize: 32
+unique: 484, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 484, success, outsize: 120
+unique: 485, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name f1, file inum 3
+   unique: 485, success, outsize: 48
+unique: 486, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name f1, file inum 3
+   unique: 486, success, outsize: 16
+unique: 487, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 487, success, outsize: 16
+to previous version
+yfs undo
+ec undo
+unique: 488, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 488, success, outsize: 144
+unique: 489, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+   unique: 489, error: -2 (No such file or directory), outsize: 16
+unique: 490, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+   unique: 490, error: -2 (No such file or directory), outsize: 16
+unique: 491, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 491, success, outsize: 144
+unique: 492, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f2
+isdir: 2 is a dir
+   unique: 492, error: -2 (No such file or directory), outsize: 16
+unique: 493, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 493, success, outsize: 144
+unique: 494, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f3
+isdir: 2 is a dir
+   unique: 494, error: -2 (No such file or directory), outsize: 16
+to previous version
+yfs undo
+ec undo
+unique: 495, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 495, success, outsize: 144
+unique: 496, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 496, success, outsize: 144
+unique: 497, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 497, success, outsize: 32
+unique: 498, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 3
+   unique: 498, success, outsize: 120
+unique: 499, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 499, success, outsize: 19
+unique: 500, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 500, success, outsize: 16
+to next version
+unique: 501, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 501, success, outsize: 144
+unique: 502, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+   unique: 502, error: -2 (No such file or directory), outsize: 16
+unique: 503, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+   unique: 503, error: -2 (No such file or directory), outsize: 16
+unique: 504, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 504, success, outsize: 144
+unique: 505, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f2
+isdir: 2 is a dir
+   unique: 505, error: -2 (No such file or directory), outsize: 16
+unique: 506, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 506, success, outsize: 144
+unique: 507, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f3
+isdir: 2 is a dir
+   unique: 507, error: -2 (No such file or directory), outsize: 16
+to next version
+unique: 508, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 508, success, outsize: 144
+unique: 509, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name f1
+isdir: 2 is a dir
+Lookup: len is 2 name is f1, passed name is f1
+Lookup success: name f1 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 9
+   unique: 509, success, outsize: 144
+unique: 510, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 510, success, outsize: 32
+unique: 511, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 9
+   unique: 511, success, outsize: 120
+unique: 512, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 512, success, outsize: 25
+unique: 513, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 513, success, outsize: 16
+unique: 514, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 514, success, outsize: 144
+unique: 515, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 515, success, outsize: 32
+unique: 516, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 516, success, outsize: 120
+unique: 517, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name f1, file inum 3
+   unique: 517, success, outsize: 48
+unique: 518, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name f1, file inum 3
+   unique: 518, success, outsize: 16
+unique: 519, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 519, success, outsize: 16
+to next version
+unique: 520, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 520, success, outsize: 144
+unique: 521, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 521, success, outsize: 32
+unique: 522, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 522, success, outsize: 120
+unique: 523, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+   unique: 523, success, outsize: 16
+unique: 524, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 524, success, outsize: 16
+to next version
+unique: 525, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 525, success, outsize: 144
+unique: 526, opcode: OPENDIR (27), nodeid: 2, insize: 48, pid: 247
+   unique: 526, success, outsize: 32
+unique: 527, opcode: GETATTR (3), nodeid: 2, insize: 56, pid: 247
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 527, success, outsize: 120
+unique: 528, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name aa-0, file inum 3
+readdir dir 2, file name aa-1, file inum 4
+readdir dir 2, file name aa-2, file inum 5
+readdir dir 2, file name aa-3, file inum 6
+readdir dir 2, file name aa-4, file inum 7
+readdir dir 2, file name aa-5, file inum 8
+readdir dir 2, file name aa-6, file inum 9
+readdir dir 2, file name aa-7, file inum 10
+readdir dir 2, file name aa-8, file inum 11
+readdir dir 2, file name aa-9, file inum 12
+readdir dir 2, file name bb-0, file inum 13
+readdir dir 2, file name bb-1, file inum 14
+readdir dir 2, file name bb-2, file inum 15
+readdir dir 2, file name bb-3, file inum 16
+readdir dir 2, file name bb-4, file inum 17
+readdir dir 2, file name bb-5, file inum 18
+readdir dir 2, file name bb-6, file inum 19
+readdir dir 2, file name bb-7, file inum 20
+readdir dir 2, file name bb-8, file inum 21
+readdir dir 2, file name bb-9, file inum 22
+   unique: 528, success, outsize: 656
+unique: 529, opcode: READDIR (28), nodeid: 2, insize: 80, pid: 247
+fuseserver_readdir
+isdir: 2 is a dir
+readdir dir 2
+isdir: 2 is a dir
+readdir dir 2, file name aa-0, file inum 3
+readdir dir 2, file name aa-1, file inum 4
+readdir dir 2, file name aa-2, file inum 5
+readdir dir 2, file name aa-3, file inum 6
+readdir dir 2, file name aa-4, file inum 7
+readdir dir 2, file name aa-5, file inum 8
+readdir dir 2, file name aa-6, file inum 9
+readdir dir 2, file name aa-7, file inum 10
+readdir dir 2, file name aa-8, file inum 11
+readdir dir 2, file name aa-9, file inum 12
+readdir dir 2, file name bb-0, file inum 13
+readdir dir 2, file name bb-1, file inum 14
+readdir dir 2, file name bb-2, file inum 15
+readdir dir 2, file name bb-3, file inum 16
+readdir dir 2, file name bb-4, file inum 17
+readdir dir 2, file name bb-5, file inum 18
+readdir dir 2, file name bb-6, file inum 19
+readdir dir 2, file name bb-7, file inum 20
+readdir dir 2, file name bb-8, file inum 21
+readdir dir 2, file name bb-9, file inum 22
+   unique: 529, success, outsize: 16
+unique: 530, opcode: RELEASEDIR (29), nodeid: 2, insize: 64, pid: 0
+   unique: 530, success, outsize: 16
+unique: 531, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 531, success, outsize: 144
+unique: 532, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-0
+Lookup success: name aa-0 inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 4
+   unique: 532, success, outsize: 144
+unique: 533, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 533, success, outsize: 32
+unique: 534, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 534, success, outsize: 20
+unique: 535, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 535, success, outsize: 16
+unique: 536, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 536, success, outsize: 144
+unique: 537, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-1
+Lookup: len is 4 name is aa-1, passed name is aa-1
+Lookup success: name aa-1 inum 4
+isfile: 4 is a file
+getfile 0000000000000004
+getfile 0000000000000004 -> sz 4
+   unique: 537, success, outsize: 144
+unique: 538, opcode: OPEN (14), nodeid: 4, insize: 48, pid: 247
+   unique: 538, success, outsize: 32
+unique: 539, opcode: READ (15), nodeid: 4, insize: 80, pid: 247
+   unique: 539, success, outsize: 20
+unique: 540, opcode: RELEASE (18), nodeid: 4, insize: 64, pid: 0
+   unique: 540, success, outsize: 16
+unique: 541, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 541, success, outsize: 144
+unique: 542, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-2
+Lookup: len is 4 name is aa-1, passed name is aa-2
+Lookup: len is 4 name is aa-2, passed name is aa-2
+Lookup success: name aa-2 inum 5
+isfile: 5 is a file
+getfile 0000000000000005
+getfile 0000000000000005 -> sz 4
+   unique: 542, success, outsize: 144
+unique: 543, opcode: OPEN (14), nodeid: 5, insize: 48, pid: 247
+   unique: 543, success, outsize: 32
+unique: 544, opcode: READ (15), nodeid: 5, insize: 80, pid: 247
+   unique: 544, success, outsize: 20
+unique: 545, opcode: RELEASE (18), nodeid: 5, insize: 64, pid: 0
+   unique: 545, success, outsize: 16
+unique: 546, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 546, success, outsize: 144
+unique: 547, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-3
+Lookup: len is 4 name is aa-1, passed name is aa-3
+Lookup: len is 4 name is aa-2, passed name is aa-3
+Lookup: len is 4 name is aa-3, passed name is aa-3
+Lookup success: name aa-3 inum 6
+isfile: 6 is a file
+getfile 0000000000000006
+getfile 0000000000000006 -> sz 4
+   unique: 547, success, outsize: 144
+unique: 548, opcode: OPEN (14), nodeid: 6, insize: 48, pid: 247
+   unique: 548, success, outsize: 32
+unique: 549, opcode: READ (15), nodeid: 6, insize: 80, pid: 247
+   unique: 549, success, outsize: 20
+unique: 550, opcode: RELEASE (18), nodeid: 6, insize: 64, pid: 0
+   unique: 550, success, outsize: 16
+unique: 551, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 551, success, outsize: 144
+unique: 552, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-4
+Lookup: len is 4 name is aa-1, passed name is aa-4
+Lookup: len is 4 name is aa-2, passed name is aa-4
+Lookup: len is 4 name is aa-3, passed name is aa-4
+Lookup: len is 4 name is aa-4, passed name is aa-4
+Lookup success: name aa-4 inum 7
+isfile: 7 is a file
+getfile 0000000000000007
+getfile 0000000000000007 -> sz 4
+   unique: 552, success, outsize: 144
+unique: 553, opcode: OPEN (14), nodeid: 7, insize: 48, pid: 247
+   unique: 553, success, outsize: 32
+unique: 554, opcode: READ (15), nodeid: 7, insize: 80, pid: 247
+   unique: 554, success, outsize: 20
+unique: 555, opcode: RELEASE (18), nodeid: 7, insize: 64, pid: 0
+   unique: 555, success, outsize: 16
+unique: 556, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 556, success, outsize: 144
+unique: 557, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-5
+Lookup: len is 4 name is aa-1, passed name is aa-5
+Lookup: len is 4 name is aa-2, passed name is aa-5
+Lookup: len is 4 name is aa-3, passed name is aa-5
+Lookup: len is 4 name is aa-4, passed name is aa-5
+Lookup: len is 4 name is aa-5, passed name is aa-5
+Lookup success: name aa-5 inum 8
+isfile: 8 is a file
+getfile 0000000000000008
+getfile 0000000000000008 -> sz 4
+   unique: 557, success, outsize: 144
+unique: 558, opcode: OPEN (14), nodeid: 8, insize: 48, pid: 247
+   unique: 558, success, outsize: 32
+unique: 559, opcode: READ (15), nodeid: 8, insize: 80, pid: 247
+   unique: 559, success, outsize: 20
+unique: 560, opcode: RELEASE (18), nodeid: 8, insize: 64, pid: 0
+   unique: 560, success, outsize: 16
+unique: 561, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 561, success, outsize: 144
+unique: 562, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-6
+Lookup: len is 4 name is aa-1, passed name is aa-6
+Lookup: len is 4 name is aa-2, passed name is aa-6
+Lookup: len is 4 name is aa-3, passed name is aa-6
+Lookup: len is 4 name is aa-4, passed name is aa-6
+Lookup: len is 4 name is aa-5, passed name is aa-6
+Lookup: len is 4 name is aa-6, passed name is aa-6
+Lookup success: name aa-6 inum 9
+isfile: 9 is a file
+getfile 0000000000000009
+getfile 0000000000000009 -> sz 4
+   unique: 562, success, outsize: 144
+unique: 563, opcode: OPEN (14), nodeid: 9, insize: 48, pid: 247
+   unique: 563, success, outsize: 32
+unique: 564, opcode: READ (15), nodeid: 9, insize: 80, pid: 247
+   unique: 564, success, outsize: 20
+unique: 565, opcode: RELEASE (18), nodeid: 9, insize: 64, pid: 0
+   unique: 565, success, outsize: 16
+unique: 566, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 566, success, outsize: 144
+unique: 567, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-7
+Lookup: len is 4 name is aa-1, passed name is aa-7
+Lookup: len is 4 name is aa-2, passed name is aa-7
+Lookup: len is 4 name is aa-3, passed name is aa-7
+Lookup: len is 4 name is aa-4, passed name is aa-7
+Lookup: len is 4 name is aa-5, passed name is aa-7
+Lookup: len is 4 name is aa-6, passed name is aa-7
+Lookup: len is 4 name is aa-7, passed name is aa-7
+Lookup success: name aa-7 inum 10
+isfile: 10 is a file
+getfile 000000000000000a
+getfile 000000000000000a -> sz 4
+   unique: 567, success, outsize: 144
+unique: 568, opcode: OPEN (14), nodeid: 10, insize: 48, pid: 247
+   unique: 568, success, outsize: 32
+unique: 569, opcode: READ (15), nodeid: 10, insize: 80, pid: 247
+   unique: 569, success, outsize: 20
+unique: 570, opcode: RELEASE (18), nodeid: 10, insize: 64, pid: 0
+   unique: 570, success, outsize: 16
+unique: 571, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 571, success, outsize: 144
+unique: 572, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-8
+Lookup: len is 4 name is aa-1, passed name is aa-8
+Lookup: len is 4 name is aa-2, passed name is aa-8
+Lookup: len is 4 name is aa-3, passed name is aa-8
+Lookup: len is 4 name is aa-4, passed name is aa-8
+Lookup: len is 4 name is aa-5, passed name is aa-8
+Lookup: len is 4 name is aa-6, passed name is aa-8
+Lookup: len is 4 name is aa-7, passed name is aa-8
+Lookup: len is 4 name is aa-8, passed name is aa-8
+Lookup success: name aa-8 inum 11
+isfile: 11 is a file
+getfile 000000000000000b
+getfile 000000000000000b -> sz 4
+   unique: 572, success, outsize: 144
+unique: 573, opcode: OPEN (14), nodeid: 11, insize: 48, pid: 247
+   unique: 573, success, outsize: 32
+unique: 574, opcode: READ (15), nodeid: 11, insize: 80, pid: 247
+   unique: 574, success, outsize: 20
+unique: 575, opcode: RELEASE (18), nodeid: 11, insize: 64, pid: 0
+   unique: 575, success, outsize: 16
+unique: 576, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 576, success, outsize: 144
+unique: 577, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name aa-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is aa-9
+Lookup: len is 4 name is aa-1, passed name is aa-9
+Lookup: len is 4 name is aa-2, passed name is aa-9
+Lookup: len is 4 name is aa-3, passed name is aa-9
+Lookup: len is 4 name is aa-4, passed name is aa-9
+Lookup: len is 4 name is aa-5, passed name is aa-9
+Lookup: len is 4 name is aa-6, passed name is aa-9
+Lookup: len is 4 name is aa-7, passed name is aa-9
+Lookup: len is 4 name is aa-8, passed name is aa-9
+Lookup: len is 4 name is aa-9, passed name is aa-9
+Lookup success: name aa-9 inum 12
+isfile: 12 is a file
+getfile 000000000000000c
+getfile 000000000000000c -> sz 4
+   unique: 577, success, outsize: 144
+unique: 578, opcode: OPEN (14), nodeid: 12, insize: 48, pid: 247
+   unique: 578, success, outsize: 32
+unique: 579, opcode: READ (15), nodeid: 12, insize: 80, pid: 247
+   unique: 579, success, outsize: 20
+unique: 580, opcode: RELEASE (18), nodeid: 12, insize: 64, pid: 0
+   unique: 580, success, outsize: 16
+unique: 581, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 581, success, outsize: 144
+unique: 582, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-0
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-0
+Lookup: len is 4 name is aa-1, passed name is bb-0
+Lookup: len is 4 name is aa-2, passed name is bb-0
+Lookup: len is 4 name is aa-3, passed name is bb-0
+Lookup: len is 4 name is aa-4, passed name is bb-0
+Lookup: len is 4 name is aa-5, passed name is bb-0
+Lookup: len is 4 name is aa-6, passed name is bb-0
+Lookup: len is 4 name is aa-7, passed name is bb-0
+Lookup: len is 4 name is aa-8, passed name is bb-0
+Lookup: len is 4 name is aa-9, passed name is bb-0
+Lookup: len is 4 name is bb-0, passed name is bb-0
+Lookup success: name bb-0 inum 13
+isfile: 13 is a file
+getfile 000000000000000d
+getfile 000000000000000d -> sz 4
+   unique: 582, success, outsize: 144
+unique: 583, opcode: OPEN (14), nodeid: 13, insize: 48, pid: 247
+   unique: 583, success, outsize: 32
+unique: 584, opcode: READ (15), nodeid: 13, insize: 80, pid: 247
+   unique: 584, success, outsize: 20
+unique: 585, opcode: RELEASE (18), nodeid: 13, insize: 64, pid: 0
+   unique: 585, success, outsize: 16
+unique: 586, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 586, success, outsize: 144
+unique: 587, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-1
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-1
+Lookup: len is 4 name is aa-1, passed name is bb-1
+Lookup: len is 4 name is aa-2, passed name is bb-1
+Lookup: len is 4 name is aa-3, passed name is bb-1
+Lookup: len is 4 name is aa-4, passed name is bb-1
+Lookup: len is 4 name is aa-5, passed name is bb-1
+Lookup: len is 4 name is aa-6, passed name is bb-1
+Lookup: len is 4 name is aa-7, passed name is bb-1
+Lookup: len is 4 name is aa-8, passed name is bb-1
+Lookup: len is 4 name is aa-9, passed name is bb-1
+Lookup: len is 4 name is bb-0, passed name is bb-1
+Lookup: len is 4 name is bb-1, passed name is bb-1
+Lookup success: name bb-1 inum 14
+isfile: 14 is a file
+getfile 000000000000000e
+getfile 000000000000000e -> sz 4
+   unique: 587, success, outsize: 144
+unique: 588, opcode: OPEN (14), nodeid: 14, insize: 48, pid: 247
+   unique: 588, success, outsize: 32
+unique: 589, opcode: READ (15), nodeid: 14, insize: 80, pid: 247
+   unique: 589, success, outsize: 20
+unique: 590, opcode: RELEASE (18), nodeid: 14, insize: 64, pid: 0
+   unique: 590, success, outsize: 16
+unique: 591, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 591, success, outsize: 144
+unique: 592, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-2
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-2
+Lookup: len is 4 name is aa-1, passed name is bb-2
+Lookup: len is 4 name is aa-2, passed name is bb-2
+Lookup: len is 4 name is aa-3, passed name is bb-2
+Lookup: len is 4 name is aa-4, passed name is bb-2
+Lookup: len is 4 name is aa-5, passed name is bb-2
+Lookup: len is 4 name is aa-6, passed name is bb-2
+Lookup: len is 4 name is aa-7, passed name is bb-2
+Lookup: len is 4 name is aa-8, passed name is bb-2
+Lookup: len is 4 name is aa-9, passed name is bb-2
+Lookup: len is 4 name is bb-0, passed name is bb-2
+Lookup: len is 4 name is bb-1, passed name is bb-2
+Lookup: len is 4 name is bb-2, passed name is bb-2
+Lookup success: name bb-2 inum 15
+isfile: 15 is a file
+getfile 000000000000000f
+getfile 000000000000000f -> sz 4
+   unique: 592, success, outsize: 144
+unique: 593, opcode: OPEN (14), nodeid: 15, insize: 48, pid: 247
+   unique: 593, success, outsize: 32
+unique: 594, opcode: READ (15), nodeid: 15, insize: 80, pid: 247
+   unique: 594, success, outsize: 20
+unique: 595, opcode: RELEASE (18), nodeid: 15, insize: 64, pid: 0
+   unique: 595, success, outsize: 16
+unique: 596, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 596, success, outsize: 144
+unique: 597, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-3
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-3
+Lookup: len is 4 name is aa-1, passed name is bb-3
+Lookup: len is 4 name is aa-2, passed name is bb-3
+Lookup: len is 4 name is aa-3, passed name is bb-3
+Lookup: len is 4 name is aa-4, passed name is bb-3
+Lookup: len is 4 name is aa-5, passed name is bb-3
+Lookup: len is 4 name is aa-6, passed name is bb-3
+Lookup: len is 4 name is aa-7, passed name is bb-3
+Lookup: len is 4 name is aa-8, passed name is bb-3
+Lookup: len is 4 name is aa-9, passed name is bb-3
+Lookup: len is 4 name is bb-0, passed name is bb-3
+Lookup: len is 4 name is bb-1, passed name is bb-3
+Lookup: len is 4 name is bb-2, passed name is bb-3
+Lookup: len is 4 name is bb-3, passed name is bb-3
+Lookup success: name bb-3 inum 16
+isfile: 16 is a file
+getfile 0000000000000010
+getfile 0000000000000010 -> sz 4
+   unique: 597, success, outsize: 144
+unique: 598, opcode: OPEN (14), nodeid: 16, insize: 48, pid: 247
+   unique: 598, success, outsize: 32
+unique: 599, opcode: READ (15), nodeid: 16, insize: 80, pid: 247
+   unique: 599, success, outsize: 20
+unique: 600, opcode: RELEASE (18), nodeid: 16, insize: 64, pid: 0
+   unique: 600, success, outsize: 16
+unique: 601, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 601, success, outsize: 144
+unique: 602, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-4
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-4
+Lookup: len is 4 name is aa-1, passed name is bb-4
+Lookup: len is 4 name is aa-2, passed name is bb-4
+Lookup: len is 4 name is aa-3, passed name is bb-4
+Lookup: len is 4 name is aa-4, passed name is bb-4
+Lookup: len is 4 name is aa-5, passed name is bb-4
+Lookup: len is 4 name is aa-6, passed name is bb-4
+Lookup: len is 4 name is aa-7, passed name is bb-4
+Lookup: len is 4 name is aa-8, passed name is bb-4
+Lookup: len is 4 name is aa-9, passed name is bb-4
+Lookup: len is 4 name is bb-0, passed name is bb-4
+Lookup: len is 4 name is bb-1, passed name is bb-4
+Lookup: len is 4 name is bb-2, passed name is bb-4
+Lookup: len is 4 name is bb-3, passed name is bb-4
+Lookup: len is 4 name is bb-4, passed name is bb-4
+Lookup success: name bb-4 inum 17
+isfile: 17 is a file
+getfile 0000000000000011
+getfile 0000000000000011 -> sz 4
+   unique: 602, success, outsize: 144
+unique: 603, opcode: OPEN (14), nodeid: 17, insize: 48, pid: 247
+   unique: 603, success, outsize: 32
+unique: 604, opcode: READ (15), nodeid: 17, insize: 80, pid: 247
+   unique: 604, success, outsize: 20
+unique: 605, opcode: RELEASE (18), nodeid: 17, insize: 64, pid: 0
+   unique: 605, success, outsize: 16
+unique: 606, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 606, success, outsize: 144
+unique: 607, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-5
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-5
+Lookup: len is 4 name is aa-1, passed name is bb-5
+Lookup: len is 4 name is aa-2, passed name is bb-5
+Lookup: len is 4 name is aa-3, passed name is bb-5
+Lookup: len is 4 name is aa-4, passed name is bb-5
+Lookup: len is 4 name is aa-5, passed name is bb-5
+Lookup: len is 4 name is aa-6, passed name is bb-5
+Lookup: len is 4 name is aa-7, passed name is bb-5
+Lookup: len is 4 name is aa-8, passed name is bb-5
+Lookup: len is 4 name is aa-9, passed name is bb-5
+Lookup: len is 4 name is bb-0, passed name is bb-5
+Lookup: len is 4 name is bb-1, passed name is bb-5
+Lookup: len is 4 name is bb-2, passed name is bb-5
+Lookup: len is 4 name is bb-3, passed name is bb-5
+Lookup: len is 4 name is bb-4, passed name is bb-5
+Lookup: len is 4 name is bb-5, passed name is bb-5
+Lookup success: name bb-5 inum 18
+isfile: 18 is a file
+getfile 0000000000000012
+getfile 0000000000000012 -> sz 4
+   unique: 607, success, outsize: 144
+unique: 608, opcode: OPEN (14), nodeid: 18, insize: 48, pid: 247
+   unique: 608, success, outsize: 32
+unique: 609, opcode: READ (15), nodeid: 18, insize: 80, pid: 247
+   unique: 609, success, outsize: 20
+unique: 610, opcode: RELEASE (18), nodeid: 18, insize: 64, pid: 0
+   unique: 610, success, outsize: 16
+unique: 611, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 611, success, outsize: 144
+unique: 612, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-6
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-6
+Lookup: len is 4 name is aa-1, passed name is bb-6
+Lookup: len is 4 name is aa-2, passed name is bb-6
+Lookup: len is 4 name is aa-3, passed name is bb-6
+Lookup: len is 4 name is aa-4, passed name is bb-6
+Lookup: len is 4 name is aa-5, passed name is bb-6
+Lookup: len is 4 name is aa-6, passed name is bb-6
+Lookup: len is 4 name is aa-7, passed name is bb-6
+Lookup: len is 4 name is aa-8, passed name is bb-6
+Lookup: len is 4 name is aa-9, passed name is bb-6
+Lookup: len is 4 name is bb-0, passed name is bb-6
+Lookup: len is 4 name is bb-1, passed name is bb-6
+Lookup: len is 4 name is bb-2, passed name is bb-6
+Lookup: len is 4 name is bb-3, passed name is bb-6
+Lookup: len is 4 name is bb-4, passed name is bb-6
+Lookup: len is 4 name is bb-5, passed name is bb-6
+Lookup: len is 4 name is bb-6, passed name is bb-6
+Lookup success: name bb-6 inum 19
+isfile: 19 is a file
+getfile 0000000000000013
+getfile 0000000000000013 -> sz 4
+   unique: 612, success, outsize: 144
+unique: 613, opcode: OPEN (14), nodeid: 19, insize: 48, pid: 247
+   unique: 613, success, outsize: 32
+unique: 614, opcode: READ (15), nodeid: 19, insize: 80, pid: 247
+   unique: 614, success, outsize: 20
+unique: 615, opcode: RELEASE (18), nodeid: 19, insize: 64, pid: 0
+   unique: 615, success, outsize: 16
+unique: 616, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 616, success, outsize: 144
+unique: 617, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-7
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-7
+Lookup: len is 4 name is aa-1, passed name is bb-7
+Lookup: len is 4 name is aa-2, passed name is bb-7
+Lookup: len is 4 name is aa-3, passed name is bb-7
+Lookup: len is 4 name is aa-4, passed name is bb-7
+Lookup: len is 4 name is aa-5, passed name is bb-7
+Lookup: len is 4 name is aa-6, passed name is bb-7
+Lookup: len is 4 name is aa-7, passed name is bb-7
+Lookup: len is 4 name is aa-8, passed name is bb-7
+Lookup: len is 4 name is aa-9, passed name is bb-7
+Lookup: len is 4 name is bb-0, passed name is bb-7
+Lookup: len is 4 name is bb-1, passed name is bb-7
+Lookup: len is 4 name is bb-2, passed name is bb-7
+Lookup: len is 4 name is bb-3, passed name is bb-7
+Lookup: len is 4 name is bb-4, passed name is bb-7
+Lookup: len is 4 name is bb-5, passed name is bb-7
+Lookup: len is 4 name is bb-6, passed name is bb-7
+Lookup: len is 4 name is bb-7, passed name is bb-7
+Lookup success: name bb-7 inum 20
+isfile: 20 is a file
+getfile 0000000000000014
+getfile 0000000000000014 -> sz 4
+   unique: 617, success, outsize: 144
+unique: 618, opcode: OPEN (14), nodeid: 20, insize: 48, pid: 247
+   unique: 618, success, outsize: 32
+unique: 619, opcode: READ (15), nodeid: 20, insize: 80, pid: 247
+   unique: 619, success, outsize: 20
+unique: 620, opcode: RELEASE (18), nodeid: 20, insize: 64, pid: 0
+   unique: 620, success, outsize: 16
+unique: 621, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 621, success, outsize: 144
+unique: 622, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-8
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-8
+Lookup: len is 4 name is aa-1, passed name is bb-8
+Lookup: len is 4 name is aa-2, passed name is bb-8
+Lookup: len is 4 name is aa-3, passed name is bb-8
+Lookup: len is 4 name is aa-4, passed name is bb-8
+Lookup: len is 4 name is aa-5, passed name is bb-8
+Lookup: len is 4 name is aa-6, passed name is bb-8
+Lookup: len is 4 name is aa-7, passed name is bb-8
+Lookup: len is 4 name is aa-8, passed name is bb-8
+Lookup: len is 4 name is aa-9, passed name is bb-8
+Lookup: len is 4 name is bb-0, passed name is bb-8
+Lookup: len is 4 name is bb-1, passed name is bb-8
+Lookup: len is 4 name is bb-2, passed name is bb-8
+Lookup: len is 4 name is bb-3, passed name is bb-8
+Lookup: len is 4 name is bb-4, passed name is bb-8
+Lookup: len is 4 name is bb-5, passed name is bb-8
+Lookup: len is 4 name is bb-6, passed name is bb-8
+Lookup: len is 4 name is bb-7, passed name is bb-8
+Lookup: len is 4 name is bb-8, passed name is bb-8
+Lookup success: name bb-8 inum 21
+isfile: 21 is a file
+getfile 0000000000000015
+getfile 0000000000000015 -> sz 4
+   unique: 622, success, outsize: 144
+unique: 623, opcode: OPEN (14), nodeid: 21, insize: 48, pid: 247
+   unique: 623, success, outsize: 32
+unique: 624, opcode: READ (15), nodeid: 21, insize: 80, pid: 247
+   unique: 624, success, outsize: 20
+unique: 625, opcode: RELEASE (18), nodeid: 21, insize: 64, pid: 0
+   unique: 625, success, outsize: 16
+unique: 626, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 626, success, outsize: 144
+unique: 627, opcode: LOOKUP (1), nodeid: 2, insize: 45, pid: 247
+yfs:lookup file name bb-9
+isdir: 2 is a dir
+Lookup: len is 4 name is aa-0, passed name is bb-9
+Lookup: len is 4 name is aa-1, passed name is bb-9
+Lookup: len is 4 name is aa-2, passed name is bb-9
+Lookup: len is 4 name is aa-3, passed name is bb-9
+Lookup: len is 4 name is aa-4, passed name is bb-9
+Lookup: len is 4 name is aa-5, passed name is bb-9
+Lookup: len is 4 name is aa-6, passed name is bb-9
+Lookup: len is 4 name is aa-7, passed name is bb-9
+Lookup: len is 4 name is aa-8, passed name is bb-9
+Lookup: len is 4 name is aa-9, passed name is bb-9
+Lookup: len is 4 name is bb-0, passed name is bb-9
+Lookup: len is 4 name is bb-1, passed name is bb-9
+Lookup: len is 4 name is bb-2, passed name is bb-9
+Lookup: len is 4 name is bb-3, passed name is bb-9
+Lookup: len is 4 name is bb-4, passed name is bb-9
+Lookup: len is 4 name is bb-5, passed name is bb-9
+Lookup: len is 4 name is bb-6, passed name is bb-9
+Lookup: len is 4 name is bb-7, passed name is bb-9
+Lookup: len is 4 name is bb-8, passed name is bb-9
+Lookup: len is 4 name is bb-9, passed name is bb-9
+Lookup success: name bb-9 inum 22
+isfile: 22 is a file
+getfile 0000000000000016
+getfile 0000000000000016 -> sz 4
+   unique: 627, success, outsize: 144
+unique: 628, opcode: OPEN (14), nodeid: 22, insize: 48, pid: 247
+   unique: 628, success, outsize: 32
+unique: 629, opcode: READ (15), nodeid: 22, insize: 80, pid: 247
+   unique: 629, success, outsize: 20
+unique: 630, opcode: RELEASE (18), nodeid: 22, insize: 64, pid: 0
+   unique: 630, success, outsize: 16
+to next version
+unique: 631, opcode: LOOKUP (1), nodeid: 1, insize: 45, pid: 247
+yfs:lookup file name d247
+isdir: 1 is a dir
+Lookup: len is 4 name is d247, passed name is d247
+Lookup success: name d247 inum 2
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1510758323 1510758323 1510758323
+   unique: 631, success, outsize: 144
+unique: 632, opcode: LOOKUP (1), nodeid: 2, insize: 43, pid: 247
+yfs:lookup file name bf
+isdir: 2 is a dir
+Lookup: len is 4 name is bb-0, passed name is bf
+Lookup: len is 4 name is bb-1, passed name is bf
+Lookup: len is 4 name is bb-2, passed name is bf
+Lookup: len is 4 name is bb-3, passed name is bf
+Lookup: len is 4 name is bb-4, passed name is bf
+Lookup: len is 4 name is bb-5, passed name is bf
+Lookup: len is 4 name is bb-6, passed name is bf
+Lookup: len is 4 name is bb-7, passed name is bf
+Lookup: len is 4 name is bb-8, passed name is bf
+Lookup: len is 4 name is bb-9, passed name is bf
+Lookup: len is 2 name is bf, passed name is bf
+Lookup success: name bf inum 3
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 20000
+   unique: 632, success, outsize: 144
+unique: 633, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 247
+   unique: 633, success, outsize: 32
+unique: 634, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 247
+isfile: 3 is a file
+getfile 0000000000000003
+getfile 0000000000000003 -> sz 20000
+   unique: 634, success, outsize: 120
+unique: 635, opcode: READ (15), nodeid: 3, insize: 80, pid: 247
+   unique: 635, success, outsize: 20016
+unique: 636, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+   unique: 636, success, outsize: 16
+unique: 637, opcode: FORGET (2), nodeid: 12, insize: 48, pid: 0
+unique: 638, opcode: FORGET (2), nodeid: 11, insize: 48, pid: 0
+unique: 639, opcode: FORGET (2), nodeid: 10, insize: 48, pid: 0
+unique: 640, opcode: FORGET (2), nodeid: 9, insize: 48, pid: 0
+unique: 641, opcode: FORGET (2), nodeid: 8, insize: 48, pid: 0
+unique: 642, opcode: FORGET (2), nodeid: 7, insize: 48, pid: 0
+unique: 643, opcode: FORGET (2), nodeid: 6, insize: 48, pid: 0
+unique: 644, opcode: FORGET (2), nodeid: 5, insize: 48, pid: 0
+unique: 645, opcode: FORGET (2), nodeid: 4, insize: 48, pid: 0
+unique: 646, opcode: FORGET (2), nodeid: 3, insize: 48, pid: 0
+unique: 647, opcode: FORGET (2), nodeid: 22, insize: 48, pid: 0
+unique: 648, opcode: FORGET (2), nodeid: 21, insize: 48, pid: 0
+unique: 649, opcode: FORGET (2), nodeid: 20, insize: 48, pid: 0
+unique: 650, opcode: FORGET (2), nodeid: 19, insize: 48, pid: 0
+unique: 651, opcode: FORGET (2), nodeid: 18, insize: 48, pid: 0
+unique: 652, opcode: FORGET (2), nodeid: 17, insize: 48, pid: 0
+unique: 653, opcode: FORGET (2), nodeid: 16, insize: 48, pid: 0
+unique: 654, opcode: FORGET (2), nodeid: 15, insize: 48, pid: 0
+unique: 655, opcode: FORGET (2), nodeid: 14, insize: 48, pid: 0
+unique: 656, opcode: FORGET (2), nodeid: 13, insize: 48, pid: 0
+unique: 657, opcode: FORGET (2), nodeid: 2, insize: 48, pid: 0
+unique: 658, opcode: FORGET (2), nodeid: 1, insize: 48, pid: 0
+fuse: failed to unmount /home/stu/devlop/lab4/yfs1: Invalid argument
