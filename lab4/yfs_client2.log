@@ -1,0 +1,846 @@
+FUSE library version: 2.9.4
+unique: 1, opcode: INIT (26), nodeid: 0, insize: 56, pid: 0
+INIT: 7.26
+flags=0x001ffffb
+max_readahead=0x00020000
+   INIT: 7.19
+   flags=0x00000000
+   max_readahead=0x00020000
+   max_write=0x00020000
+   max_background=0
+   congestion_threshold=0
+   unique: 1, success, outsize: 40
+unique: 2, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 276
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+   unique: 2, error: -2 (No such file or directory), outsize: 16
+unique: 3, opcode: MKDIR (9), nodeid: 1, insize: 54, pid: 276
+mkdir 1
+isdir: 1 is a dir
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+ec create
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525742 1509525742 1509525742
+   unique: 3, success, outsize: 144
+unique: 4, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 276
+lookup file name da276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is da276
+Lookup success: name da276 inum 2
+isfile: 2 is a dir or a symbol link
+getattr 0000000000000002 0
+isfile: 2 is a dir or a symbol link
+isdir: 2 is a dir
+getdir 0000000000000002
+   getattr -> 1509525742 1509525742 1509525742
+   unique: 4, success, outsize: 144
+unique: 5, opcode: ACCESS (34), nodeid: 2, insize: 48, pid: 276
+   unique: 5, error: -38 (Function not implemented), outsize: 16
+unique: 6, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525742 1509525742 1509525742
+   unique: 6, success, outsize: 144
+unique: 7, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-0
+isdir: 3 is a dir
+   unique: 7, error: -2 (No such file or directory), outsize: 16
+unique: 8, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-0
+isdir: 3 is a dir
+ec create
+create file name xx-0 inum 8
+isfile: 8 is a file
+getattr 0000000000000008 1
+isfile: 8 is a file
+getfile 0000000000000008
+getfile 0000000000000008 -> sz 0
+   getattr -> 0
+   unique: 8, success, outsize: 160
+OK: create returns.
+unique: 9, opcode: GETXATTR (22), nodeid: 8, insize: 68, pid: 277
+   unique: 9, error: -38 (Function not implemented), outsize: 16
+unique: 10, opcode: WRITE (16), nodeid: 8, insize: 84, pid: 277
+   unique: 10, success, outsize: 24
+unique: 11, opcode: FLUSH (25), nodeid: 8, insize: 64, pid: 277
+   unique: 11, error: -38 (Function not implemented), outsize: 16
+unique: 12, opcode: RELEASE (18), nodeid: 8, insize: 64, pid: 0
+   unique: 12, success, outsize: 16
+unique: 13, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 13, success, outsize: 144
+unique: 14, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-1
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-1
+   unique: 14, error: -2 (No such file or directory), outsize: 16
+unique: 15, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-1
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-1
+ec create
+create file name xx-1 inum 9
+isfile: 9 is a file
+getattr 0000000000000009 1
+isfile: 9 is a file
+getfile 0000000000000009
+getfile 0000000000000009 -> sz 0
+   getattr -> 0
+   unique: 15, success, outsize: 160
+OK: create returns.
+unique: 16, opcode: WRITE (16), nodeid: 9, insize: 84, pid: 277
+   unique: 16, success, outsize: 24
+unique: 17, opcode: RELEASE (18), nodeid: 9, insize: 64, pid: 0
+   unique: 17, success, outsize: 16
+unique: 18, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 18, success, outsize: 144
+unique: 19, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-2
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-2
+Lookup: len is 4 name is xx-1, passed name is xx-2
+   unique: 19, error: -2 (No such file or directory), outsize: 16
+unique: 20, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-2
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-2
+Lookup: len is 4 name is xx-1, passed name is xx-2
+ec create
+create file name xx-2 inum 10
+isfile: 10 is a file
+getattr 000000000000000a 1
+isfile: 10 is a file
+getfile 000000000000000a
+getfile 000000000000000a -> sz 0
+   getattr -> 0
+   unique: 20, success, outsize: 160
+OK: create returns.
+unique: 21, opcode: WRITE (16), nodeid: 10, insize: 84, pid: 277
+   unique: 21, success, outsize: 24
+unique: 22, opcode: RELEASE (18), nodeid: 10, insize: 64, pid: 0
+   unique: 22, success, outsize: 16
+unique: 23, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 23, success, outsize: 144
+unique: 24, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-3
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-3
+Lookup: len is 4 name is xx-1, passed name is xx-3
+Lookup: len is 4 name is xx-2, passed name is xx-3
+   unique: 24, error: -2 (No such file or directory), outsize: 16
+unique: 25, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-3
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-3
+Lookup: len is 4 name is xx-1, passed name is xx-3
+Lookup: len is 4 name is xx-2, passed name is xx-3
+ec create
+create file name xx-3 inum 11
+isfile: 11 is a file
+getattr 000000000000000b 1
+isfile: 11 is a file
+getfile 000000000000000b
+getfile 000000000000000b -> sz 0
+   getattr -> 0
+   unique: 25, success, outsize: 160
+OK: create returns.
+unique: 26, opcode: WRITE (16), nodeid: 11, insize: 84, pid: 277
+   unique: 26, success, outsize: 24
+unique: 27, opcode: RELEASE (18), nodeid: 11, insize: 64, pid: 0
+   unique: 27, success, outsize: 16
+unique: 28, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 28, success, outsize: 144
+unique: 29, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-4
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-4
+Lookup: len is 4 name is xx-1, passed name is xx-4
+Lookup: len is 4 name is xx-2, passed name is xx-4
+Lookup: len is 4 name is xx-3, passed name is xx-4
+   unique: 29, error: -2 (No such file or directory), outsize: 16
+unique: 30, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-4
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-4
+Lookup: len is 4 name is xx-1, passed name is xx-4
+Lookup: len is 4 name is xx-2, passed name is xx-4
+Lookup: len is 4 name is xx-3, passed name is xx-4
+ec create
+create file name xx-4 inum 12
+isfile: 12 is a file
+getattr 000000000000000c 1
+isfile: 12 is a file
+getfile 000000000000000c
+getfile 000000000000000c -> sz 0
+   getattr -> 0
+   unique: 30, success, outsize: 160
+OK: create returns.
+unique: 31, opcode: WRITE (16), nodeid: 12, insize: 84, pid: 277
+   unique: 31, success, outsize: 24
+unique: 32, opcode: RELEASE (18), nodeid: 12, insize: 64, pid: 0
+   unique: 32, success, outsize: 16
+unique: 33, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 33, success, outsize: 144
+unique: 34, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-5
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-5
+Lookup: len is 4 name is xx-1, passed name is xx-5
+Lookup: len is 4 name is xx-2, passed name is xx-5
+Lookup: len is 4 name is xx-3, passed name is xx-5
+Lookup: len is 4 name is xx-4, passed name is xx-5
+   unique: 34, error: -2 (No such file or directory), outsize: 16
+unique: 35, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-5
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-5
+Lookup: len is 4 name is xx-1, passed name is xx-5
+Lookup: len is 4 name is xx-2, passed name is xx-5
+Lookup: len is 4 name is xx-3, passed name is xx-5
+Lookup: len is 4 name is xx-4, passed name is xx-5
+ec create
+create file name xx-5 inum 13
+isfile: 13 is a file
+getattr 000000000000000d 1
+isfile: 13 is a file
+getfile 000000000000000d
+getfile 000000000000000d -> sz 0
+   getattr -> 0
+   unique: 35, success, outsize: 160
+OK: create returns.
+unique: 36, opcode: WRITE (16), nodeid: 13, insize: 84, pid: 277
+   unique: 36, success, outsize: 24
+unique: 37, opcode: RELEASE (18), nodeid: 13, insize: 64, pid: 0
+   unique: 37, success, outsize: 16
+unique: 38, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 38, success, outsize: 144
+unique: 39, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-6
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-6
+Lookup: len is 4 name is xx-1, passed name is xx-6
+Lookup: len is 4 name is xx-2, passed name is xx-6
+Lookup: len is 4 name is xx-3, passed name is xx-6
+Lookup: len is 4 name is xx-4, passed name is xx-6
+Lookup: len is 4 name is xx-5, passed name is xx-6
+   unique: 39, error: -2 (No such file or directory), outsize: 16
+unique: 40, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-6
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-6
+Lookup: len is 4 name is xx-1, passed name is xx-6
+Lookup: len is 4 name is xx-2, passed name is xx-6
+Lookup: len is 4 name is xx-3, passed name is xx-6
+Lookup: len is 4 name is xx-4, passed name is xx-6
+Lookup: len is 4 name is xx-5, passed name is xx-6
+ec create
+create file name xx-6 inum 15
+isfile: 15 is a file
+getattr 000000000000000f 1
+isfile: 15 is a file
+getfile 000000000000000f
+getfile 000000000000000f -> sz 0
+   getattr -> 0
+   unique: 40, success, outsize: 160
+OK: create returns.
+unique: 41, opcode: WRITE (16), nodeid: 15, insize: 84, pid: 277
+   unique: 41, success, outsize: 24
+unique: 42, opcode: RELEASE (18), nodeid: 15, insize: 64, pid: 0
+   unique: 42, success, outsize: 16
+unique: 43, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 43, success, outsize: 144
+unique: 44, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-7
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-7
+Lookup: len is 4 name is xx-1, passed name is xx-7
+Lookup: len is 4 name is xx-2, passed name is xx-7
+Lookup: len is 4 name is xx-3, passed name is xx-7
+Lookup: len is 4 name is xx-4, passed name is xx-7
+Lookup: len is 4 name is xx-5, passed name is xx-7
+Lookup: len is 4 name is xx-6, passed name is xx-7
+   unique: 44, error: -2 (No such file or directory), outsize: 16
+unique: 45, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-7
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-7
+Lookup: len is 4 name is xx-1, passed name is xx-7
+Lookup: len is 4 name is xx-2, passed name is xx-7
+Lookup: len is 4 name is xx-3, passed name is xx-7
+Lookup: len is 4 name is xx-4, passed name is xx-7
+Lookup: len is 4 name is xx-5, passed name is xx-7
+Lookup: len is 4 name is xx-6, passed name is xx-7
+ec create
+create file name xx-7 inum 17
+isfile: 17 is a file
+getattr 0000000000000011 1
+isfile: 17 is a file
+getfile 0000000000000011
+getfile 0000000000000011 -> sz 0
+   getattr -> 0
+   unique: 45, success, outsize: 160
+OK: create returns.
+unique: 46, opcode: WRITE (16), nodeid: 17, insize: 84, pid: 277
+   unique: 46, success, outsize: 24
+unique: 47, opcode: RELEASE (18), nodeid: 17, insize: 64, pid: 0
+   unique: 47, success, outsize: 16
+unique: 48, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 48, success, outsize: 144
+unique: 49, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-8
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-8
+Lookup: len is 4 name is xx-1, passed name is xx-8
+Lookup: len is 4 name is xx-2, passed name is xx-8
+Lookup: len is 4 name is xx-3, passed name is xx-8
+Lookup: len is 4 name is xx-4, passed name is xx-8
+Lookup: len is 4 name is xx-5, passed name is xx-8
+Lookup: len is 4 name is xx-6, passed name is xx-8
+Lookup: len is 4 name is xx-7, passed name is xx-8
+   unique: 49, error: -2 (No such file or directory), outsize: 16
+unique: 50, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-8
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-8
+Lookup: len is 4 name is xx-1, passed name is xx-8
+Lookup: len is 4 name is xx-2, passed name is xx-8
+Lookup: len is 4 name is xx-3, passed name is xx-8
+Lookup: len is 4 name is xx-4, passed name is xx-8
+Lookup: len is 4 name is xx-5, passed name is xx-8
+Lookup: len is 4 name is xx-6, passed name is xx-8
+Lookup: len is 4 name is xx-7, passed name is xx-8
+ec create
+create file name xx-8 inum 19
+isfile: 19 is a file
+getattr 0000000000000013 1
+isfile: 19 is a file
+getfile 0000000000000013
+getfile 0000000000000013 -> sz 0
+   getattr -> 0
+   unique: 50, success, outsize: 160
+OK: create returns.
+unique: 51, opcode: WRITE (16), nodeid: 19, insize: 84, pid: 277
+   unique: 51, success, outsize: 24
+unique: 52, opcode: RELEASE (18), nodeid: 19, insize: 64, pid: 0
+   unique: 52, success, outsize: 16
+unique: 53, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 53, success, outsize: 144
+unique: 54, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-9
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-9
+Lookup: len is 4 name is xx-1, passed name is xx-9
+Lookup: len is 4 name is xx-2, passed name is xx-9
+Lookup: len is 4 name is xx-3, passed name is xx-9
+Lookup: len is 4 name is xx-4, passed name is xx-9
+Lookup: len is 4 name is xx-5, passed name is xx-9
+Lookup: len is 4 name is xx-6, passed name is xx-9
+Lookup: len is 4 name is xx-7, passed name is xx-9
+Lookup: len is 4 name is xx-8, passed name is xx-9
+   unique: 54, error: -2 (No such file or directory), outsize: 16
+unique: 55, opcode: CREATE (35), nodeid: 3, insize: 61, pid: 277
+create lookup
+lookup file name xx-9
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-9
+Lookup: len is 4 name is xx-1, passed name is xx-9
+Lookup: len is 4 name is xx-2, passed name is xx-9
+Lookup: len is 4 name is xx-3, passed name is xx-9
+Lookup: len is 4 name is xx-4, passed name is xx-9
+Lookup: len is 4 name is xx-5, passed name is xx-9
+Lookup: len is 4 name is xx-6, passed name is xx-9
+Lookup: len is 4 name is xx-7, passed name is xx-9
+Lookup: len is 4 name is xx-8, passed name is xx-9
+ec create
+create file name xx-9 inum 21
+isfile: 21 is a file
+getattr 0000000000000015 1
+isfile: 21 is a file
+getfile 0000000000000015
+getfile 0000000000000015 -> sz 0
+   getattr -> 0
+   unique: 55, success, outsize: 160
+OK: create returns.
+unique: 56, opcode: WRITE (16), nodeid: 21, insize: 84, pid: 277
+   unique: 56, success, outsize: 24
+unique: 57, opcode: RELEASE (18), nodeid: 21, insize: 64, pid: 0
+   unique: 57, success, outsize: 16
+unique: 58, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525743 1509525743 1509525743
+   unique: 58, success, outsize: 144
+unique: 59, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-0
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-0, passed name is xx-0
+Lookup success: name xx-0 inum 8
+isfile: 8 is a file
+getattr 0000000000000008 1
+isfile: 8 is a file
+getfile 0000000000000008
+getfile 0000000000000008 -> sz 4
+   getattr -> 4
+   unique: 59, success, outsize: 144
+unique: 60, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 8 is not a dir
+unlink file xx-0
+originial buf
+ 200
+after buf
+ 180
+   unique: 60, success, outsize: 16
+unique: 61, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 61, success, outsize: 144
+unique: 62, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-1
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-1, passed name is xx-1
+Lookup success: name xx-1 inum 9
+isfile: 9 is a file
+getattr 0000000000000009 1
+isfile: 9 is a file
+getfile 0000000000000009
+getfile 0000000000000009 -> sz 4
+   getattr -> 4
+   unique: 62, success, outsize: 144
+unique: 63, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 9 is not a dir
+unlink file xx-1
+originial buf
+ 180
+after buf
+ 160
+   unique: 63, success, outsize: 16
+unique: 64, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 64, success, outsize: 144
+unique: 65, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-2
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-2, passed name is xx-2
+Lookup success: name xx-2 inum 10
+isfile: 10 is a file
+getattr 000000000000000a 1
+isfile: 10 is a file
+getfile 000000000000000a
+getfile 000000000000000a -> sz 4
+   getattr -> 4
+   unique: 65, success, outsize: 144
+unique: 66, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 10 is not a dir
+unlink file xx-2
+originial buf
+ 160
+after buf
+ 140
+   unique: 66, success, outsize: 16
+unique: 67, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 67, success, outsize: 144
+unique: 68, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-3
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-3, passed name is xx-3
+Lookup success: name xx-3 inum 11
+isfile: 11 is a file
+getattr 000000000000000b 1
+isfile: 11 is a file
+getfile 000000000000000b
+getfile 000000000000000b -> sz 4
+   getattr -> 4
+   unique: 68, success, outsize: 144
+unique: 70, opcode: BATCH_FORGET (42), nodeid: 0, insize: 96, pid: 0
+unique: 69, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 11 is not a dir
+unlink file xx-3
+originial buf
+ 140
+after buf
+ 120
+   unique: 69, success, outsize: 16
+unique: 72, opcode: FORGET (2), nodeid: 11, insize: 48, pid: 0
+unique: 71, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 71, success, outsize: 144
+unique: 73, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-4
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-4, passed name is xx-4
+Lookup success: name xx-4 inum 12
+isfile: 12 is a file
+getattr 000000000000000c 1
+isfile: 12 is a file
+getfile 000000000000000c
+getfile 000000000000000c -> sz 4
+   getattr -> 4
+   unique: 73, success, outsize: 144
+unique: 74, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 12 is not a dir
+unlink file xx-4
+originial buf
+ 120
+after buf
+ 100
+   unique: 74, success, outsize: 16
+unique: 76, opcode: FORGET (2), nodeid: 12, insize: 48, pid: 0
+unique: 75, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 75, success, outsize: 144
+unique: 77, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-5
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-5, passed name is xx-5
+Lookup success: name xx-5 inum 13
+isfile: 13 is a file
+getattr 000000000000000d 1
+isfile: 13 is a file
+getfile 000000000000000d
+getfile 000000000000000d -> sz 4
+   getattr -> 4
+   unique: 77, success, outsize: 144
+unique: 78, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 13 is not a dir
+unlink file xx-5
+originial buf
+ 100
+after buf
+ 80
+   unique: 78, success, outsize: 16
+unique: 80, opcode: FORGET (2), nodeid: 13, insize: 48, pid: 0
+unique: 79, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 79, success, outsize: 144
+unique: 81, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-6
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-6, passed name is xx-6
+Lookup success: name xx-6 inum 15
+isfile: 15 is a file
+getattr 000000000000000f 1
+isfile: 15 is a file
+getfile 000000000000000f
+getfile 000000000000000f -> sz 4
+   getattr -> 4
+   unique: 81, success, outsize: 144
+unique: 82, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 15 is not a dir
+unlink file xx-6
+originial buf
+ 80
+after buf
+ 60
+   unique: 82, success, outsize: 16
+unique: 84, opcode: FORGET (2), nodeid: 15, insize: 48, pid: 0
+unique: 83, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 83, success, outsize: 144
+unique: 85, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-7
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-7, passed name is xx-7
+Lookup success: name xx-7 inum 17
+isfile: 17 is a file
+getattr 0000000000000011 1
+isfile: 17 is a file
+getfile 0000000000000011
+getfile 0000000000000011 -> sz 4
+   getattr -> 4
+   unique: 85, success, outsize: 144
+unique: 86, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 17 is not a dir
+unlink file xx-7
+originial buf
+ 60
+after buf
+ 40
+   unique: 86, success, outsize: 16
+unique: 88, opcode: FORGET (2), nodeid: 17, insize: 48, pid: 0
+unique: 87, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 277
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 87, success, outsize: 144
+unique: 89, opcode: LOOKUP (1), nodeid: 3, insize: 45, pid: 277
+lookup file name xx-8
+isdir: 3 is a dir
+Lookup: len is 4 name is xx-8, passed name is xx-8
+Lookup success: name xx-8 inum 19
+isfile: 19 is a file
+getattr 0000000000000013 1
+isfile: 19 is a file
+getfile 0000000000000013
+getfile 0000000000000013 -> sz 4
+   getattr -> 4
+   unique: 89, success, outsize: 144
+unique: 90, opcode: UNLINK (10), nodeid: 3, insize: 45, pid: 277
+isdir: 3 is a dir
+isdir: 19 is not a dir
+unlink file xx-8
+originial buf
+ 40
+after buf
+ 20
+   unique: 90, success, outsize: 16
+unique: 91, opcode: FORGET (2), nodeid: 19, insize: 48, pid: 0
+unique: 92, opcode: LOOKUP (1), nodeid: 1, insize: 46, pid: 276
+lookup file name db276
+isdir: 1 is a dir
+Lookup: len is 5 name is da276, passed name is db276
+Lookup: len is 5 name is db276, passed name is db276
+Lookup success: name db276 inum 3
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 92, success, outsize: 144
+unique: 93, opcode: OPENDIR (27), nodeid: 3, insize: 48, pid: 276
+   unique: 93, success, outsize: 32
+unique: 94, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 276
+isfile: 3 is a dir or a symbol link
+getattr 0000000000000003 0
+isfile: 3 is a dir or a symbol link
+isdir: 3 is a dir
+getdir 0000000000000003
+   getattr -> 1509525744 1509525744 1509525744
+   unique: 94, success, outsize: 120
+unique: 95, opcode: READDIR (28), nodeid: 3, insize: 80, pid: 276
+fuseserver_readdir
+isdir: 3 is a dir
+readdir dir 3
+isdir: 3 is a dir
+readdir dir 3, file name xx-9, file inum 21
+   unique: 95, success, outsize: 48
+unique: 96, opcode: READDIR (28), nodeid: 3, insize: 80, pid: 276
+fuseserver_readdir
+isdir: 3 is a dir
+readdir dir 3
+isdir: 3 is a dir
+readdir dir 3, file name xx-9, file inum 21
+   unique: 96, success, outsize: 16
+unique: 97, opcode: RELEASEDIR (29), nodeid: 3, insize: 64, pid: 0
+   unique: 97, success, outsize: 16
+unique: 98, opcode: FORGET (2), nodeid: 2, insize: 48, pid: 0
+unique: 99, opcode: FORGET (2), nodeid: 21, insize: 48, pid: 0
+unique: 100, opcode: FORGET (2), nodeid: 3, insize: 48, pid: 0
+unique: 101, opcode: FORGET (2), nodeid: 1, insize: 48, pid: 0
+fuse: failed to unmount /home/stu/devlop/lab4/yfs2: Invalid argument
